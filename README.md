@@ -33,13 +33,14 @@ SRL = move bits para direita <br />
 |         LD          |        0001         |
 |         ST          |        0010         |
 |        MVNZ         |        0011         |
-|        MVI          |        0100         |
-|        ADD          |        0101         |
-|        SUB          |        0110         |
-|         OR          |        0111         |
-|        SLT          |        1000         |
-|        SLL          |        1001         |
-|        SRL          |        1010         |
+|        MV           |        0100         |
+|        MVI          |        0101         |
+|        ADD          |        0110         |
+|        SUB          |        0111         |
+|         OR          |        1000         |
+|        SLT          |        1001         |
+|        SLL          |        1010         |
+|        SRL          |        1011         |
 
 Registradores
 ============
