@@ -26,7 +26,7 @@ SLT = compara se um registrador é menor que outro <br />
 SLL = move bits para esquerda <br />
 SRL = move bits para direita <br />
 
-``` cada instrução carrega  bits ```
+``` cada instrução carrega 4 bits ```
 
 |      Operações      |      Num bits       |
 | ------------------- | ------------------- |
