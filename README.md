@@ -53,7 +53,10 @@ Estágios habilitados
 
 Módulos:
 [ x* ] dec3to8  <br />
+[ ] MIF LPM  <br />
+[ ] MIF Virtual  <br />
 [ x ] Memória LPM  <br />
+[ ] Memória Virtual  <br />
 [ ] MODULO PRINCIPAL PRÁTICA 2  <br />
 [ x* ] MUX  <br />
 [ ] processador  <br />
