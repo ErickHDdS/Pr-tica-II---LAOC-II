@@ -57,3 +57,4 @@ set_global_assignment -name VERILOG_FILE upcount.v
 set_global_assignment -name VERILOG_FILE dec3to8.v
 set_global_assignment -name VERILOG_FILE regn.v
 set_global_assignment -name VERILOG_FILE ULA.v
+set_global_assignment -name VERILOG_FILE MUX.v
