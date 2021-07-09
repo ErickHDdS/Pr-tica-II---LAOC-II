@@ -52,14 +52,14 @@ Estágios habilitados
 ============
 
 Módulos:
-[] dec3to8
-[] Memória TLB
-[] MUX
-[] ULA
-[] Memória LPM
-[] MODULO PRINCIPAL PRÁTICA 2
-[] processador
-[] upcount
-[] TLB
+[ x* ] dec3to8  <br />
+[ x ] Memória LPM  <br />
+[ ] MODULO PRINCIPAL PRÁTICA 2  <br />
+[ x* ] MUX  <br />
+[ ] processador  <br />
+[ x ] regN  <br />
+[ x ] ULA  <br />
+[ x* ] upcount  <br /> 
+[ ] TLB  <br />
 
 
