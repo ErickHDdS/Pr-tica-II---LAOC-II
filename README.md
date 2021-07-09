@@ -1,13 +1,30 @@
 # Pratica II LAOC-II
 Prática II implementada na disciplina de Laboratório de Arquitetura e Organização de Computadores II do curso de Engenharia de Computação - CEFET/MG
 
-Check List Primeiros passos:
+Check List
+=================
+
+<!--ts-->
+   * [Definir](#definir)
+      * [Operações](#operacoes)
+      * [Instruções](#instrucoes)
+      * [DataPath](#datapath)
+      * [Estágios habilitados](#estagios-habilitados)
+<!--te-->
 
 
-- [ ] Operações
-- [ ] Blocos de instrução
-- [ ] Acrésimos
-- [ ] DataPath
-- [ ] Estágios habilitados
 
+Definir
+============
 
+Operações
+-----
+
+Instruções
+-----
+
+DataPath
+-----
+
+Estágios habilitados
+-----
