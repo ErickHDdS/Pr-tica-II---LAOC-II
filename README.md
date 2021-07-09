@@ -30,6 +30,17 @@ SRL = move bits para direita <br />
 Registradores
 ============
 R1, R2, R3, R4, R5, R6, R7, R8 e R9. O último é para incremento de PC.
+``` cada reg tem quatro bits ```
+|    Registradores    |      Num bits       |
+| ------------------- | ------------------- |
+|         R1          |        0000         |
+|         R2          |        0000         |
+|         R3          |        0000         |
+|         R4          |        0000         |
+|         R5          |        0000         |
+|         R6          |        0000         |
+|         R7          |        0000         |
+|         R8          |        0000         |
 
 Estágios habilitados
 ============
