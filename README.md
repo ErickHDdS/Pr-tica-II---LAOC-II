@@ -26,21 +26,26 @@ SLT = compara se um registrador é menor que outro <br />
 SLL = move bits para esquerda <br />
 SRL = move bits para direita <br />
 
+``` cada instrução carrega  bits ```
+
+|      Operações      |      Num bits       |
+| ------------------- | ------------------- |
+|         LD          |        0001         |
+|         ST          |        0010         |
+|        MVNZ         |        0011         |
+|        MVI          |        0100         |
+|        ADD          |        0101         |
+|        SUB          |        0110         |
+|         OR          |        0111         |
+|        SLT          |        1000         |
+|        SLL          |        1001         |
+|        SRL          |        1010         |
 
 Registradores
 ============
-R1, R2, R3, R4, R5, R6, R7, R8 e R9. O último é para incremento de PC.
-``` cada reg tem quatro bits ```
-|    Registradores    |      Num bits       |
-| ------------------- | ------------------- |
-|         R1          |        0000         |
-|         R2          |        0000         |
-|         R3          |        0000         |
-|         R4          |        0000         |
-|         R5          |        0000         |
-|         R6          |        0000         |
-|         R7          |        0000         |
-|         R8          |        0000         |
+R1, R2, R3, R4, R5, R6, R7, R8 e R9. O último é para incremento de PC. <br />
+``` cada reg tem 16 bits ```
+
 
 Estágios habilitados
 ============
