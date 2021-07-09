@@ -4,6 +4,11 @@ module proc (DIN, Resetn, Clock, Run, Done, BusWires);
 	output Done;
 	output [15:0] BusWires;
 	
+	// registers
+	input[15:0] R0, R1, R2, R3, R4, R5, R6, R7, A, G;
+	input[15:0] saidaULA;
+	
+	
 	... declare variables
 	
 	wire Clear = ...
