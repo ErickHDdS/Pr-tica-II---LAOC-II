@@ -55,14 +55,14 @@ R0, R1, R2, R3, R4, R5, R6, R7, A. <br />
 Estágios habilitados
 ============
 
-Módulos:
-[ x* ] dec3to8  <br />
+Módulos:<br />
+[ x ] dec3to8  <br />
 [ ] MIF LPM  <br />
 [ ] MIF Virtual  <br />
 [ x ] Memória LPM  <br />
 [ ] Memória Virtual  <br />
 [ ] MODULO PRINCIPAL PRÁTICA 2  <br />
-[ x* ] MUX  <br />
+[ x ] MUX  <br />
 [ ] processador  <br />
 [ x ] regN  <br />
 [ x ] ULA  <br />
