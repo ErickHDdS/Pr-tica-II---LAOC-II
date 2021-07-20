@@ -149,7 +149,22 @@ module proc (DIN, Resetn, Clock, Run, Done, BusWires);
 			endcase
 		end
 	end
-	regn reg_0 (BusWires, regIn[0], Clock, R0);
-	//... instantiate other registers and the adder/subtracter unit
+	ULA ula(signalUla, A, saidaULA, BusWires);
+			    
+	//... instantiate other registers
+	regn reg_0(BusWires, regIn[0], Clock, R0, Resetn);
+	regn reg_1(BusWires, regIn[1], Clock, R1, Resetn);
+	regn reg_2(BusWires, regIn[2], Clock, R2, Resetn);
+	regn reg_3(BusWires, regIn[3], Clock, R3, Resetn);
+	regn reg_4(BusWires, regIn[4], Clock, R4, Resetn);
+	regn reg_5(BusWires, regIn[5], Clock, R5, Resetn);
+	regn reg_6(BusWires, regIn[6], Clock, R6, Resetn);
+	regn reg_7(BusWires, regIn[7], Clock, R7, Resetn);
+	regn reg_A(BusWires, aIn, Clock, A, Resetn);
+	regn reg_G(saidaULA, gIn, Clock, G, Resetn);	
+								    
+	regn reg_IR(DIN[15:6], irIn, Clock, IR, Resetn);			// reg das intruções	
+	
 	//... define the bus
+	MUX mux( R0, R1, R2, R3, R4, R5, R6, R7, BusWires, DIN, G, {dinOut, regOut, gOut);
 endmodule
