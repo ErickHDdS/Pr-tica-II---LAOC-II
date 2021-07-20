@@ -30,7 +30,7 @@ SRL = move bits para direita <br />
 
 |      Operações      |      Num bits       |
 | ------------------- | ------------------- |
-|         LD          |        0001         |
+|         LD          |        0000         |
 |         ST          |        0001         |
 |        MVNZ         |        0010         |
 |        MV           |        0011         |
