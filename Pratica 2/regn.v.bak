@@ -1,15 +1,11 @@
-module regn(R, Rin, Clock, Q, set0);
-
+module regn(R, Rin, Clock, Q);
 	parameter n = 16;
 	input [n-1:0] R;
-	input Rin, Clock, set0;
+	input Rin, Clock;
 	output [n-1:0] Q;
 	reg [n-1:0] Q;
 	
 	always @(posedge Clock)
 		if (Rin)
 			Q <= R;
-		else
-			if(set0)
-				Q <=16'b0;
 endmodule
