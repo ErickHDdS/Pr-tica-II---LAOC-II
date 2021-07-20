@@ -1,4 +1,4 @@
-module MUX(R0, R1, R2, R3, R4, R5, R6, R7, Bus, DIN, G, control );
+module MUX(R0, R1, R2, R3, R4, R5, R6, R7, Bus, DIN, G, control);
 	input[15:0] R0, R1, R2, R3, R4, R5, R6, R7, G, DIN;
 	input [9:0] control;
 	output reg[15:0] Bus;

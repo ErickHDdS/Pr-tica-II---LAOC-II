@@ -1,5 +1,5 @@
 Analysis & Synthesis report for proc
-Tue Jul 20 17:40:12 2021
+Tue Jul 20 20:18:33 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,15 +13,27 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
  10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: regn:reg_0
- 12. Port Connectivity Checks: "regn:reg_0"
- 13. Port Connectivity Checks: "dec3to8:decY"
- 14. Port Connectivity Checks: "dec3to8:decX"
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: regn:reg_0
+ 13. Parameter Settings for User Entity Instance: regn:reg_1
+ 14. Parameter Settings for User Entity Instance: regn:reg_2
+ 15. Parameter Settings for User Entity Instance: regn:reg_3
+ 16. Parameter Settings for User Entity Instance: regn:reg_4
+ 17. Parameter Settings for User Entity Instance: regn:reg_5
+ 18. Parameter Settings for User Entity Instance: regn:reg_6
+ 19. Parameter Settings for User Entity Instance: regn:reg_7
+ 20. Parameter Settings for User Entity Instance: regn:reg_A
+ 21. Parameter Settings for User Entity Instance: regn:reg_G
+ 22. Parameter Settings for User Entity Instance: regn:reg_IR
+ 23. Port Connectivity Checks: "regn:reg_IR"
+ 24. Port Connectivity Checks: "regn:reg_G"
+ 25. Port Connectivity Checks: "dec3to8:decY"
+ 26. Port Connectivity Checks: "dec3to8:decX"
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
 
 
 
@@ -47,15 +59,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jul 20 17:40:12 2021           ;
+; Analysis & Synthesis Status        ; Successful - Tue Jul 20 20:18:33 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; proc                                            ;
 ; Top-level Entity Name              ; proc                                            ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 0                                               ;
-;     Total combinational functions  ; 0                                               ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
+; Total logic elements               ; 329                                             ;
+;     Total combinational functions  ; 329                                             ;
+;     Dedicated logic registers      ; 139                                             ;
+; Total registers                    ; 139                                             ;
 ; Total pins                         ; 36                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -169,6 +181,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; upcount.v                        ; yes             ; User Verilog HDL File  ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica 2/upcount.v ;         ;
 ; dec3to8.v                        ; yes             ; User Verilog HDL File  ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica 2/dec3to8.v ;         ;
 ; regn.v                           ; yes             ; User Verilog HDL File  ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica 2/regn.v    ;         ;
+; ULA.v                            ; yes             ; User Verilog HDL File  ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica 2/ULA.v     ;         ;
+; MUX.v                            ; yes             ; User Verilog HDL File  ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica 2/MUX.v     ;         ;
 +----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -177,23 +191,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
+; Estimated Total logic elements              ; 329   ;
 ;                                             ;       ;
-; Total combinational functions               ; 0     ;
+; Total combinational functions               ; 329   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
+;     -- 4 input functions                    ; 126   ;
+;     -- 3 input functions                    ; 49    ;
+;     -- <=2 input functions                  ; 154   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
+;     -- normal mode                          ; 329   ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
+; Total registers                             ; 139   ;
+;     -- Dedicated logic registers            ; 139   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 36    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; Clock ;
+; Maximum fan-out                             ; 139   ;
+; Total fan-out                               ; 1391  ;
+; Average fan-out                             ; 2.76  ;
 +---------------------------------------------+-------+
 
 
@@ -202,28 +221,59 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |proc                      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |proc               ; work         ;
+; |proc                      ; 329 (41)          ; 139 (0)      ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |proc               ; work         ;
+;    |MUX:mux|               ; 140 (140)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|MUX:mux       ; work         ;
+;    |regn:reg_0|            ; 17 (17)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|regn:reg_0    ; work         ;
+;    |regn:reg_1|            ; 17 (17)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|regn:reg_1    ; work         ;
+;    |regn:reg_2|            ; 17 (17)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|regn:reg_2    ; work         ;
+;    |regn:reg_3|            ; 17 (17)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|regn:reg_3    ; work         ;
+;    |regn:reg_4|            ; 17 (17)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|regn:reg_4    ; work         ;
+;    |regn:reg_5|            ; 17 (17)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|regn:reg_5    ; work         ;
+;    |regn:reg_6|            ; 17 (17)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|regn:reg_6    ; work         ;
+;    |regn:reg_7|            ; 17 (17)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|regn:reg_7    ; work         ;
+;    |regn:reg_IR|           ; 10 (10)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|regn:reg_IR   ; work         ;
+;    |upcount:Tstep|         ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|upcount:Tstep ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; upcount:Tstep|Q[0,1]                  ; Lost fanout        ;
-; Total Number of Removed Registers = 2 ;                    ;
-+---------------------------------------+--------------------+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; Done$latch                                          ; Done                ; yes                    ;
+; MUX:mux|Bus[0]                                      ; MUX:mux|WideNor0    ; yes                    ;
+; MUX:mux|Bus[1]                                      ; MUX:mux|WideNor0    ; yes                    ;
+; MUX:mux|Bus[2]                                      ; MUX:mux|WideNor0    ; yes                    ;
+; MUX:mux|Bus[3]                                      ; MUX:mux|WideNor0    ; yes                    ;
+; MUX:mux|Bus[4]                                      ; MUX:mux|WideNor0    ; yes                    ;
+; MUX:mux|Bus[5]                                      ; MUX:mux|WideNor0    ; yes                    ;
+; MUX:mux|Bus[6]                                      ; MUX:mux|WideNor0    ; yes                    ;
+; MUX:mux|Bus[7]                                      ; MUX:mux|WideNor0    ; yes                    ;
+; MUX:mux|Bus[8]                                      ; MUX:mux|WideNor0    ; yes                    ;
+; MUX:mux|Bus[9]                                      ; MUX:mux|WideNor0    ; yes                    ;
+; MUX:mux|Bus[10]                                     ; MUX:mux|WideNor0    ; yes                    ;
+; MUX:mux|Bus[11]                                     ; MUX:mux|WideNor0    ; yes                    ;
+; MUX:mux|Bus[12]                                     ; MUX:mux|WideNor0    ; yes                    ;
+; MUX:mux|Bus[13]                                     ; MUX:mux|WideNor0    ; yes                    ;
+; MUX:mux|Bus[14]                                     ; MUX:mux|WideNor0    ; yes                    ;
+; MUX:mux|Bus[15]                                     ; MUX:mux|WideNor0    ; yes                    ;
+; Clear                                               ; Clear               ; yes                    ;
+; Number of user-specified and inferred latches = 18  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+----------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                      ;
-+--------------------+--------------------+----------------------------------------+
-; Register name      ; Reason for Removal ; Registers Removed due to This Register ;
-+--------------------+--------------------+----------------------------------------+
-; upcount:Tstep|Q[1] ; Lost Fanouts       ; upcount:Tstep|Q[0]                     ;
-+--------------------+--------------------+----------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; regn:reg_A|Q[0..15]                    ; Lost fanout                            ;
+; regn:reg_G|Q[0..15]                    ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 32 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -231,14 +281,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 139   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 137   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |proc|regn:reg_IR|Q[6]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |proc|regn:reg_0|Q[13]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |proc|regn:reg_1|Q[10]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |proc|regn:reg_2|Q[10]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |proc|regn:reg_3|Q[3]      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |proc|regn:reg_4|Q[4]      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |proc|regn:reg_5|Q[0]      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |proc|regn:reg_6|Q[11]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |proc|regn:reg_7|Q[13]     ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |proc|regIn[7]             ;
+; 10:1               ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; No         ; |proc|regOut[3]            ;
+; 10:1               ; 16 bits   ; 96 LEs        ; 112 LEs              ; -16 LEs                ; No         ; |proc|MUX:mux|Selector4    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +---------------------------------------------------------+
@@ -251,34 +321,142 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "regn:reg_0"                                                                                                                                  ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                      ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; set0 ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regn:reg_1 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; n              ; 16    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dec3to8:decY"                                                                       ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; En   ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; Y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regn:reg_2 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; n              ; 16    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dec3to8:decX"                                                                          ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; En      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; Y[1..7] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regn:reg_3 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; n              ; 16    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regn:reg_4 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; n              ; 16    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regn:reg_5 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; n              ; 16    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regn:reg_6 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; n              ; 16    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regn:reg_7 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; n              ; 16    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regn:reg_A ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; n              ; 16    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regn:reg_G ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; n              ; 16    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regn:reg_IR ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; n              ; 16    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "regn:reg_IR"                                                                                                                                   ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                       ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; R     ; Input  ; Warning  ; Input port expression (10 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "R[15..10]" will be connected to GND. ;
+; Q     ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (10 bits) it drives; bit(s) "Q[15..10]" have no fanouts                      ;
+; Q[15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                           ;
++-------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "regn:reg_G" ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; Rin  ; Input ; Info     ; Stuck at GND ;
++------+-------+----------+--------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "dec3to8:decY" ;
++------+-------+----------+----------------+
+; Port ; Type  ; Severity ; Details        ;
++------+-------+----------+----------------+
+; En   ; Input ; Info     ; Stuck at VCC   ;
++------+-------+----------+----------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "dec3to8:decX" ;
++------+-------+----------+----------------+
+; Port ; Type  ; Severity ; Details        ;
++------+-------+----------+----------------+
+; En   ; Input ; Info     ; Stuck at VCC   ;
++------+-------+----------+----------------+
 
 
 +-------------------------------+
@@ -296,7 +474,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jul 20 17:40:11 2021
+    Info: Processing started: Tue Jul 20 20:18:32 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proc -c proc
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file memory.v
@@ -316,77 +494,109 @@ Warning (12090): Entity "MUX" obtained from "MUX.v" instead of from Quartus II m
 Info (12021): Found 1 design units, including 1 entities, in source file mux.v
     Info (12023): Found entity 1: MUX
 Info (12127): Elaborating entity "proc" for the top level hierarchy
-Warning (10858): Verilog HDL warning at proc.v(8): object G used but never assigned
-Warning (10036): Verilog HDL or VHDL warning at proc.v(11): object "regOut" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at proc.v(19): object "aIn" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at proc.v(19): object "gIn" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at proc.v(19): object "gOut" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at proc.v(19): object "dinOut" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at proc.v(19): object "irIn" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at proc.v(19): object "addIn" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at proc.v(19): object "doutIn" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at proc.v(20): object "signalUla" assigned a value but never read
-Warning (10235): Verilog HDL Always Construct warning at proc.v(42): variable "Run" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at proc.v(69): variable "G" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10270): Verilog HDL Case Statement warning at proc.v(54): incomplete case statement has no default case item
-Warning (10270): Verilog HDL Case Statement warning at proc.v(130): incomplete case statement has no default case item
+Warning (10235): Verilog HDL Always Construct warning at proc.v(40): variable "Run" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at proc.v(66): variable "G" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at proc.v(51): incomplete case statement has no default case item
+Warning (10270): Verilog HDL Case Statement warning at proc.v(127): incomplete case statement has no default case item
 Warning (10240): Verilog HDL Always Construct warning at proc.v(29): inferring latch(es) for variable "Done", which holds its previous value in one or more paths through the always construct
 Warning (10240): Verilog HDL Always Construct warning at proc.v(29): inferring latch(es) for variable "Clear", which holds its previous value in one or more paths through the always construct
-Warning (10030): Net "IR[8..6]" at proc.v(14) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "G.0000000000000000" at proc.v(8) has no driver or initial value, using a default initial value '0'
-Info (10041): Inferred latch for "Clear" at proc.v(42)
-Info (10041): Inferred latch for "Done" at proc.v(42)
+Warning (10240): Verilog HDL Always Construct warning at proc.v(29): inferring latch(es) for variable "signalUla", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "signalUla[0]" at proc.v(40)
+Info (10041): Inferred latch for "signalUla[1]" at proc.v(40)
+Info (10041): Inferred latch for "signalUla[2]" at proc.v(40)
+Info (10041): Inferred latch for "Clear" at proc.v(40)
+Info (10041): Inferred latch for "Done" at proc.v(40)
 Info (12128): Elaborating entity "upcount" for hierarchy "upcount:Tstep"
 Info (12128): Elaborating entity "dec3to8" for hierarchy "dec3to8:decX"
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ula"
+Warning (10270): Verilog HDL Case Statement warning at ULA.v(8): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at ULA.v(8): inferring latch(es) for variable "G", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "G[0]" at ULA.v(8)
+Info (10041): Inferred latch for "G[1]" at ULA.v(8)
+Info (10041): Inferred latch for "G[2]" at ULA.v(8)
+Info (10041): Inferred latch for "G[3]" at ULA.v(8)
+Info (10041): Inferred latch for "G[4]" at ULA.v(8)
+Info (10041): Inferred latch for "G[5]" at ULA.v(8)
+Info (10041): Inferred latch for "G[6]" at ULA.v(8)
+Info (10041): Inferred latch for "G[7]" at ULA.v(8)
+Info (10041): Inferred latch for "G[8]" at ULA.v(8)
+Info (10041): Inferred latch for "G[9]" at ULA.v(8)
+Info (10041): Inferred latch for "G[10]" at ULA.v(8)
+Info (10041): Inferred latch for "G[11]" at ULA.v(8)
+Info (10041): Inferred latch for "G[12]" at ULA.v(8)
+Info (10041): Inferred latch for "G[13]" at ULA.v(8)
+Info (10041): Inferred latch for "G[14]" at ULA.v(8)
+Info (10041): Inferred latch for "G[15]" at ULA.v(8)
 Info (12128): Elaborating entity "regn" for hierarchy "regn:reg_0"
+Info (12128): Elaborating entity "MUX" for hierarchy "MUX:mux"
+Warning (10270): Verilog HDL Case Statement warning at MUX.v(7): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at MUX.v(7): all case item expressions in this case statement are onehot
+Warning (10240): Verilog HDL Always Construct warning at MUX.v(7): inferring latch(es) for variable "Bus", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Bus[0]" at MUX.v(7)
+Info (10041): Inferred latch for "Bus[1]" at MUX.v(7)
+Info (10041): Inferred latch for "Bus[2]" at MUX.v(7)
+Info (10041): Inferred latch for "Bus[3]" at MUX.v(7)
+Info (10041): Inferred latch for "Bus[4]" at MUX.v(7)
+Info (10041): Inferred latch for "Bus[5]" at MUX.v(7)
+Info (10041): Inferred latch for "Bus[6]" at MUX.v(7)
+Info (10041): Inferred latch for "Bus[7]" at MUX.v(7)
+Info (10041): Inferred latch for "Bus[8]" at MUX.v(7)
+Info (10041): Inferred latch for "Bus[9]" at MUX.v(7)
+Info (10041): Inferred latch for "Bus[10]" at MUX.v(7)
+Info (10041): Inferred latch for "Bus[11]" at MUX.v(7)
+Info (10041): Inferred latch for "Bus[12]" at MUX.v(7)
+Info (10041): Inferred latch for "Bus[13]" at MUX.v(7)
+Info (10041): Inferred latch for "Bus[14]" at MUX.v(7)
+Info (10041): Inferred latch for "Bus[15]" at MUX.v(7)
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Done" is stuck at GND
-    Warning (13410): Pin "BusWires[0]" is stuck at GND
-    Warning (13410): Pin "BusWires[1]" is stuck at GND
-    Warning (13410): Pin "BusWires[2]" is stuck at GND
-    Warning (13410): Pin "BusWires[3]" is stuck at GND
-    Warning (13410): Pin "BusWires[4]" is stuck at GND
-    Warning (13410): Pin "BusWires[5]" is stuck at GND
-    Warning (13410): Pin "BusWires[6]" is stuck at GND
-    Warning (13410): Pin "BusWires[7]" is stuck at GND
-    Warning (13410): Pin "BusWires[8]" is stuck at GND
-    Warning (13410): Pin "BusWires[9]" is stuck at GND
-    Warning (13410): Pin "BusWires[10]" is stuck at GND
-    Warning (13410): Pin "BusWires[11]" is stuck at GND
-    Warning (13410): Pin "BusWires[12]" is stuck at GND
-    Warning (13410): Pin "BusWires[13]" is stuck at GND
-    Warning (13410): Pin "BusWires[14]" is stuck at GND
-    Warning (13410): Pin "BusWires[15]" is stuck at GND
-Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Warning (13012): Latch Done$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal upcount:Tstep|Q[0]
+Warning (13012): Latch MUX:mux|Bus[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|Q[6]
+Warning (13012): Latch MUX:mux|Bus[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|Q[6]
+Warning (13012): Latch MUX:mux|Bus[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|Q[6]
+Warning (13012): Latch MUX:mux|Bus[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|Q[6]
+Warning (13012): Latch MUX:mux|Bus[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|Q[6]
+Warning (13012): Latch MUX:mux|Bus[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|Q[6]
+Warning (13012): Latch MUX:mux|Bus[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|Q[6]
+Warning (13012): Latch MUX:mux|Bus[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|Q[6]
+Warning (13012): Latch MUX:mux|Bus[8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|Q[6]
+Warning (13012): Latch MUX:mux|Bus[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|Q[6]
+Warning (13012): Latch MUX:mux|Bus[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|Q[6]
+Warning (13012): Latch MUX:mux|Bus[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|Q[6]
+Warning (13012): Latch MUX:mux|Bus[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|Q[6]
+Warning (13012): Latch MUX:mux|Bus[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|Q[6]
+Warning (13012): Latch MUX:mux|Bus[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|Q[6]
+Warning (13012): Latch MUX:mux|Bus[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regn:reg_IR|Q[6]
+Warning (13012): Latch Clear has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal upcount:Tstep|Q[0]
+Info (17049): 16 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 19 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "DIN[0]"
-    Warning (15610): No output dependent on input pin "DIN[1]"
-    Warning (15610): No output dependent on input pin "DIN[2]"
-    Warning (15610): No output dependent on input pin "DIN[3]"
-    Warning (15610): No output dependent on input pin "DIN[4]"
-    Warning (15610): No output dependent on input pin "DIN[5]"
-    Warning (15610): No output dependent on input pin "DIN[6]"
-    Warning (15610): No output dependent on input pin "DIN[7]"
-    Warning (15610): No output dependent on input pin "DIN[8]"
-    Warning (15610): No output dependent on input pin "DIN[9]"
-    Warning (15610): No output dependent on input pin "DIN[10]"
-    Warning (15610): No output dependent on input pin "DIN[11]"
-    Warning (15610): No output dependent on input pin "DIN[12]"
-    Warning (15610): No output dependent on input pin "DIN[13]"
-    Warning (15610): No output dependent on input pin "DIN[14]"
-    Warning (15610): No output dependent on input pin "DIN[15]"
-    Warning (15610): No output dependent on input pin "Resetn"
-    Warning (15610): No output dependent on input pin "Run"
-    Warning (15610): No output dependent on input pin "Clock"
-Info (21057): Implemented 36 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 365 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 17 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 59 warnings
-    Info: Peak virtual memory: 4594 megabytes
-    Info: Processing ended: Tue Jul 20 17:40:12 2021
+    Info (21061): Implemented 329 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 52 warnings
+    Info: Peak virtual memory: 4598 megabytes
+    Info: Processing ended: Tue Jul 20 20:18:33 2021
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

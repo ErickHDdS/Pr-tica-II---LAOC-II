@@ -16,7 +16,6 @@ module ULA(sinal, A, G, Bus);
 								G = 16'b0;
 				3'b100:	G = A << Bus;						//sll
 				3'b101:	G = A >> Bus;						//srl
-				default: G = 16'b0;
 			endcase
 		end
 	endmodule

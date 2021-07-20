@@ -21,10 +21,10 @@ module proc (DIN, Resetn, Clock, Run, Done, BusWires);
 	
 	upcount Tstep (Clear, Clock, Tstep_Q);
 	
-	assign I = IR[8:6];						//NAO SEI OQ TA ACONTECENDO AQUI =)
+	assign I = IR[8:6];						         
 	
-	dec3to8 decX (IR[5:3], 1'b1, Xreg); //NAO SEI OQ TA ACONTECENDO AQUI =')
-	dec3to8 decY (IR[2:0], 1'b1, Yreg); //NAO SEI OQ TA ACONTECENDO AQUI ='(
+	dec3to8 decX (IR[5:3], 1'b1, Xreg); 
+	dec3to8 decY (IR[2:0], 1'b1, Yreg); 
 	
 	always @(Tstep_Q or I or Xreg or Yreg)
 	begin
@@ -34,13 +34,10 @@ module proc (DIN, Resetn, Clock, Run, Done, BusWires);
 		gOut = 1'b0;
 		dinOut = 1'b0;	
 		irIn = 1'b0;
-		//signalUla = 3'b000;
 		regOut = 8'b0;
 		regIn = 8'b0;	
-		//Done = 1'b0;
 		
 		if (Run) begin
-		
 			case (Tstep_Q)
 				2'b00: // store DIN in IR in time step 0
 				begin
@@ -139,7 +136,7 @@ module proc (DIN, Resetn, Clock, Run, Done, BusWires);
 				
 				2'b11: //define signals in time step 3
 					begin
-						if(I > 3'b001) begin
+						if(I > 4'b0100) begin
 							gOut = 1'b1;
 							regIn = Xreg;
 							Done = 1'b1;
@@ -166,5 +163,5 @@ module proc (DIN, Resetn, Clock, Run, Done, BusWires);
 	regn reg_IR(DIN[15:6], irIn, Clock, IR, Resetn);			// reg das intruções	
 	
 	//... define the bus
-	MUX mux( R0, R1, R2, R3, R4, R5, R6, R7, BusWires, DIN, G, {dinOut, regOut, gOut);
+	MUX mux( R0, R1, R2, R3, R4, R5, R6, R7, BusWires, DIN, G, {dinOut, regOut, gOut});
 endmodule
