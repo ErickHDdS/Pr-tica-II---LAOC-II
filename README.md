@@ -8,6 +8,10 @@ Check List
    * [Operações](#operacoes)
    * [Registradores](#registradores)
    * [Estágios habilitados](#estagios-habilitados)
+   * [Modulos](#modulos)
+     * [Regn](#regn)
+     * [upCount](#upcount)
+     * [mux](#mux)
 <!--te-->
 
 
@@ -30,7 +34,7 @@ SRL = move bits para direita <br />
 
 |      Operações      |      Num bits       |
 | ------------------- | ------------------- |
-|         LD          |        0001         |
+|         LD          |        0000         |
 |         ST          |        0001         |
 |        MVNZ         |        0010         |
 |        MV           |        0011         |
@@ -64,5 +68,16 @@ Módulos:
 [ x ] ULA  <br />
 [ x* ] upcount  <br /> 
 [ ] TLB  <br />
+
+
+Modulos
+============
+Regn
+-----
+Módulo que tem a função de resertar o registrador passado como parâmetro ( 9 bits) ou atribui-lo a uma proxima instrução
+
+upCount
+-----
+Módulo para contar os estágios
 
 
