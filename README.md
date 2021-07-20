@@ -66,7 +66,7 @@ Módulos:
 [ ] processador  <br />
 [ x ] regN  <br />
 [ x ] ULA  <br />
-[ x* ] upcount  <br /> 
+[ x ] upcount  <br /> 
 [ ] TLB  <br />
 
 
