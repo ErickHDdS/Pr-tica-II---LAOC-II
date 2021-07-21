@@ -5,13 +5,13 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica\ 2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica 2/memory.v}
-vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica\ 2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica 2/proc.v}
-vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica\ 2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica 2/upcount.v}
-vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica\ 2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica 2/dec3to8.v}
-vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica\ 2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica 2/regn.v}
-vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica\ 2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica 2/ULA.v}
-vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica\ 2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica 2/MUX.v}
-vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica\ 2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica 2/counterlpm.v}
-vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica\ 2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica 2/pratica2.v}
+vlog -vlog01compat -work work +incdir+C:/Users/UsuÃ¡rio/Documents/GitHub/Pratica-II-LAOC-II/Pratica\ 2 {C:/Users/Usuário/Documents/GitHub/Pratica-II-LAOC-II/Pratica 2/proc.v}
+vlog -vlog01compat -work work +incdir+C:/Users/UsuÃ¡rio/Documents/GitHub/Pratica-II-LAOC-II/Pratica\ 2 {C:/Users/Usuário/Documents/GitHub/Pratica-II-LAOC-II/Pratica 2/upcount.v}
+vlog -vlog01compat -work work +incdir+C:/Users/UsuÃ¡rio/Documents/GitHub/Pratica-II-LAOC-II/Pratica\ 2 {C:/Users/Usuário/Documents/GitHub/Pratica-II-LAOC-II/Pratica 2/dec3to8.v}
+vlog -vlog01compat -work work +incdir+C:/Users/UsuÃ¡rio/Documents/GitHub/Pratica-II-LAOC-II/Pratica\ 2 {C:/Users/Usuário/Documents/GitHub/Pratica-II-LAOC-II/Pratica 2/regn.v}
+vlog -vlog01compat -work work +incdir+C:/Users/UsuÃ¡rio/Documents/GitHub/Pratica-II-LAOC-II/Pratica\ 2 {C:/Users/Usuário/Documents/GitHub/Pratica-II-LAOC-II/Pratica 2/ULA.v}
+vlog -vlog01compat -work work +incdir+C:/Users/UsuÃ¡rio/Documents/GitHub/Pratica-II-LAOC-II/Pratica\ 2 {C:/Users/Usuário/Documents/GitHub/Pratica-II-LAOC-II/Pratica 2/MUX.v}
+vlog -vlog01compat -work work +incdir+C:/Users/UsuÃ¡rio/Documents/GitHub/Pratica-II-LAOC-II/Pratica\ 2 {C:/Users/Usuário/Documents/GitHub/Pratica-II-LAOC-II/Pratica 2/counterlpm.v}
+vlog -vlog01compat -work work +incdir+C:/Users/UsuÃ¡rio/Documents/GitHub/Pratica-II-LAOC-II/Pratica\ 2 {C:/Users/Usuário/Documents/GitHub/Pratica-II-LAOC-II/Pratica 2/pratica2.v}
+vlog -vlog01compat -work work +incdir+C:/Users/UsuÃ¡rio/Documents/GitHub/Pratica-II-LAOC-II/Pratica\ 2 {C:/Users/Usuário/Documents/GitHub/Pratica-II-LAOC-II/Pratica 2/memory2.v}
 

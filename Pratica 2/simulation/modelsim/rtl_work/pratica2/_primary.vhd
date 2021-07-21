@@ -7,7 +7,6 @@ entity pratica2 is
         resetN          : in     vl_logic;
         run             : in     vl_logic;
         \bus\           : out    vl_logic_vector(15 downto 0);
-        done            : out    vl_logic;
-        n               : in     vl_logic_vector(4 downto 0)
+        done            : out    vl_logic
     );
 end pratica2;

@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="proc">
-		<CBX_INST_ENTRY INSTANCE_NAME="|pratica2|memory:mem|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_bde1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pratica2|memory2:mem|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_tm81.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|pratica2|proc:processor|counterlpm:reg_7|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_fdk.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
