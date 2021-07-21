@@ -56,10 +56,11 @@ module proc (DIN, Resetn, Clock, Run, Done, BusWires);
 				2'b01: //define signals in time step 1
 				begin 
 					case (I)
-					4'b0000: //ld
+					4'b0000: //mv
 						begin
 							regOut = Yreg;
-							addIn = 1;							
+							regIn = Xreg;
+							Done = 1;							
 						end
 						
 					4'b0001:	//st
@@ -78,11 +79,10 @@ module proc (DIN, Resetn, Clock, Run, Done, BusWires);
 							Done = 1;
 						end
 						
-					4'b0011:	//mv
+					4'b0011:	//ld
 						begin
 							regOut = Yreg;
-							regIn = Xreg;
-							Done = 1;							
+							addIn = 1;							
 						end
 						
 					4'b0100:	//mvi	
@@ -172,6 +172,6 @@ module proc (DIN, Resetn, Clock, Run, Done, BusWires);
 	regn reg_IR(DIN[15:6], irIn, Clock, IR, Resetn);			// reg das intruções	
 	
 	//... define the bus
-	MUX mux( R0, R1, R2, R3, R4, R5, R6, R7, BusWires, DIN, G, {dinOut, regOut, gOut});
+	MUX mux(R0, R1, R2, R3, R4, R5, R6, R7, BusWires, DIN, G, {dinOut, regOut, gOut});
 
 endmodule
