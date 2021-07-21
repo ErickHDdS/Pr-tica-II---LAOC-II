@@ -1,5 +1,4 @@
 module regn(R, Rin, Clock, Q, set0);
-
 	parameter n = 16;
 	input [n-1:0] R;
 	input Rin, Clock, set0;

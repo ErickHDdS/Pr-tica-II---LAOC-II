@@ -16,19 +16,24 @@ module proc (DIN, Resetn, Clock, Run, Done, BusWires);
 	wire [1:0] Tstep_Q; //ciclo de instrucao
 	
 	// signals
-	reg Clear, aIn, gIn, gOut, dinOut, irIn, addIn, doutIn, wIn;
+	reg Clear, aIn, gIn, gOut, dinOut, irIn, addIn, doutIn, wIn, incr_pc;
 	reg [2:0] signalUla;
 	
 	upcount Tstep (Clear, Clock, Tstep_Q);
 	
-	assign I = IR[8:6];						         
-	
+	assign I = IR[9:6];						         
+	initial begin
+        Clear = 1'b1;
+        
+        Done = 1'b0;
+    end
 	dec3to8 decX (IR[5:3], 1'b1, Xreg); 
 	dec3to8 decY (IR[2:0], 1'b1, Yreg); 
 	
 	always @(Tstep_Q or I or Xreg or Yreg)
 	begin
 		//... specify initial values
+		
 		aIn = 1'b0;
 		gIn = 1'b0;
 		gOut = 1'b0;
@@ -36,6 +41,7 @@ module proc (DIN, Resetn, Clock, Run, Done, BusWires);
 		irIn = 1'b0;
 		regOut = 8'b0;
 		regIn = 8'b0;	
+		incr_pc = 1'b0;
 		
 		if (Run) begin
 			case (Tstep_Q)
@@ -44,6 +50,7 @@ module proc (DIN, Resetn, Clock, Run, Done, BusWires);
 					irIn = 1'b1;
 					Done = 1'b0;
 					Clear = 1'b0;
+					incr_pc = 1'b1;
 				end
 			
 				2'b01: //define signals in time step 1
@@ -156,7 +163,9 @@ module proc (DIN, Resetn, Clock, Run, Done, BusWires);
 	regn reg_4(BusWires, regIn[4], Clock, R4, Resetn);
 	regn reg_5(BusWires, regIn[5], Clock, R5, Resetn);
 	regn reg_6(BusWires, regIn[6], Clock, R6, Resetn);
-	regn reg_7(BusWires, regIn[7], Clock, R7, Resetn);
+	
+	counterlpm reg_7 (1'b1, Clock, incr_pc, BusWires, Resetn, regIn[7], R7);
+		
 	regn reg_A(BusWires, aIn, Clock, A, Resetn);
 	regn reg_G(saidaULA, gIn, Clock, G, Resetn);	
 								    
@@ -164,4 +173,5 @@ module proc (DIN, Resetn, Clock, Run, Done, BusWires);
 	
 	//... define the bus
 	MUX mux( R0, R1, R2, R3, R4, R5, R6, R7, BusWires, DIN, G, {dinOut, regOut, gOut});
+
 endmodule
