@@ -48,7 +48,7 @@ SRL = move bits para direita <br />
 
 Registradores
 ============
-R0, R1, R2, R3, R4, R5, R6, R7, A. <br />
+R0, R1, R2, R3, R4, R5, R6, R7, A, G. <br />
 ``` cada reg tem 16 bits ```
 
 
@@ -57,17 +57,18 @@ Estágios habilitados
 
 Módulos:<br />
 [ x ] dec3to8  <br />
-[ ] MIF LPM  <br />
-[ ] MIF Virtual  <br />
 [ x ] Memória LPM  <br />
-[ ] Memória Virtual  <br />
-[ ] MODULO PRINCIPAL PRÁTICA 2  <br />
+[ x ] Counter LPM  <br />
 [ x ] MUX  <br />
-[ ] processador  <br />
+[ x ] processador  <br />
 [ x ] regN  <br />
 [ x ] ULA  <br />
 [ x ] upcount  <br /> 
 [ ] TLB  <br />
+[ ] MIF LPM (caso teste)  <br />
+[ ] MIF Virtual  <br />
+[ ] Memória Virtual  <br />
+[ ] MODULO PRINCIPAL PRÁTICA 2  <br />
 
 
 Modulos
