@@ -91,41 +91,51 @@ Modulos
 ============
 counterlpm
 -----
+Biblioteca LPM, contador
 
 dec3to8
 -----
+Extensor de sinal, estendendo registradores de 3 bits para 8 bits
 
 instructionFetch
 -----
+Gera uma página virtual que será utilizada na TLB
 
 MUX
 -----
+Recebe dez entradas e maneja sua saída
 
 pratica2
 -----
+Ligação dos módulos
 
 proc
 -----
+É o método principal, que irá designar o caminho que cada instrução irá percorrer durante sua execução
 
 ramlpm
 -----
+Biblioteca LPM, acesso à memória
 
 regn
 -----
-Módulo que tem a função de resertar o registrador passado como parâmetro ( 9 bits) ou atribui-lo a uma proxima instrução
+Módulo que tem a função de resertar o registrador passado como parâmetro ou atribui-lo a uma proxima instrução
 
 romlpm
 -----
+Biblioteca LPM, permite apenas à leitura, guarda o conteúdo das páginas virtuais, que foram escritos no arquivo romMIF.mif
 
 TLB
 -----
+Permite acesso aos casos testes
 
 ULA
 -----
+Armazena informações de como as operações aritméticas devem funcionar
 
 upcount
 -----
-Módulo para contar os estágios
+Conta os estágios
 
 Código teste:
 ============
