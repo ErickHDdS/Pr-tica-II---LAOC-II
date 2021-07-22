@@ -12,7 +12,9 @@ Check List
      * [Regn](#regn)
      * [upCount](#upcount)
      * [mux](#mux)
-   * [Testes](#codigo-teste)
+   * [Testes](#código-teste)
+     * [Programa Principal](#programa-principal)  
+     * [Loop](#loop)  
 <!--te-->
 
 
@@ -84,6 +86,9 @@ Módulo para contar os estágios
 
 Código teste:
 ============
+
+Programa Principal
+-----
 16'b0100000000000000; // MVI R0, #2 <br />
 16'b0000000000000010; // #2 <br />
 16'b0100001000000000; // MVI R1, #3 <br />
@@ -123,3 +128,12 @@ Código teste:
 16'b0010000010000000; // MVNZ R0, R2 <br />
 16'b0101000001000000; // ADD R0, R1 <br />
 
+Loop
+-----
+16'b0100010000000000; <br />
+16'b0000000000000001; <br />
+16'b0100100000000000; <br />
+16'b0000000000001010; <br />
+16'b0000101111000000; <br />
+16'b0110100010000000; <br />
+16'b0010111101000000; <br />
