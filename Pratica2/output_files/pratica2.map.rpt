@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pratica2
-Wed Jul 21 22:15:05 2021
+Thu Jul 22 11:34:59 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,35 +15,34 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
   9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Source assignments for ifetch:ifetch|romlpm:addrs|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated
- 13. Source assignments for ramlpm:memory|altsyncram:altsyncram_component|altsyncram_eli1:auto_generated
- 14. Parameter Settings for User Entity Instance: ifetch:ifetch|romlpm:addrs|altsyncram:altsyncram_component
- 15. Parameter Settings for User Entity Instance: ramlpm:memory|altsyncram:altsyncram_component
- 16. Parameter Settings for User Entity Instance: proc:proc|regn:reg_0
- 17. Parameter Settings for User Entity Instance: proc:proc|regn:reg_1
- 18. Parameter Settings for User Entity Instance: proc:proc|regn:reg_2
- 19. Parameter Settings for User Entity Instance: proc:proc|regn:reg_3
- 20. Parameter Settings for User Entity Instance: proc:proc|regn:reg_4
- 21. Parameter Settings for User Entity Instance: proc:proc|regn:reg_5
- 22. Parameter Settings for User Entity Instance: proc:proc|regn:reg_6
- 23. Parameter Settings for User Entity Instance: proc:proc|counterlpm:count|lpm_counter:LPM_COUNTER_component
- 24. Parameter Settings for User Entity Instance: proc:proc|regn:reg_A
- 25. Parameter Settings for User Entity Instance: proc:proc|regn:reg_G
- 26. Parameter Settings for User Entity Instance: proc:proc|regn:reg_IR
- 27. Parameter Settings for User Entity Instance: proc:proc|regn:reg_Addr
- 28. Parameter Settings for User Entity Instance: proc:proc|regn:reg_Dout
- 29. Parameter Settings for User Entity Instance: proc:proc|regn:reg_W
- 30. altsyncram Parameter Settings by Entity Instance
- 31. Port Connectivity Checks: "proc:proc|regn:reg_W"
- 32. Port Connectivity Checks: "proc:proc|counterlpm:count"
- 33. Port Connectivity Checks: "proc:proc|dec3to8:decY"
- 34. Port Connectivity Checks: "proc:proc|dec3to8:decX"
- 35. Port Connectivity Checks: "proc:proc"
- 36. Port Connectivity Checks: "ramlpm:memory"
- 37. Elapsed Time Per Partition
- 38. Analysis & Synthesis Messages
+ 10. General Register Statistics
+ 11. Source assignments for instructionFetch:iF|romlpm:address|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated
+ 12. Source assignments for ramlpm:memory|altsyncram:altsyncram_component|altsyncram_eli1:auto_generated
+ 13. Parameter Settings for User Entity Instance: instructionFetch:iF|romlpm:address|altsyncram:altsyncram_component
+ 14. Parameter Settings for User Entity Instance: ramlpm:memory|altsyncram:altsyncram_component
+ 15. Parameter Settings for User Entity Instance: proc:processor|regn:reg_0
+ 16. Parameter Settings for User Entity Instance: proc:processor|regn:reg_1
+ 17. Parameter Settings for User Entity Instance: proc:processor|regn:reg_2
+ 18. Parameter Settings for User Entity Instance: proc:processor|regn:reg_3
+ 19. Parameter Settings for User Entity Instance: proc:processor|regn:reg_4
+ 20. Parameter Settings for User Entity Instance: proc:processor|regn:reg_5
+ 21. Parameter Settings for User Entity Instance: proc:processor|regn:reg_6
+ 22. Parameter Settings for User Entity Instance: proc:processor|counterlpm:reg_7|lpm_counter:LPM_COUNTER_component
+ 23. Parameter Settings for User Entity Instance: proc:processor|regn:reg_A
+ 24. Parameter Settings for User Entity Instance: proc:processor|regn:reg_G
+ 25. Parameter Settings for User Entity Instance: proc:processor|regn:reg_IR
+ 26. Parameter Settings for User Entity Instance: proc:processor|regn:reg_Addr
+ 27. Parameter Settings for User Entity Instance: proc:processor|regn:reg_Dout
+ 28. Parameter Settings for User Entity Instance: proc:processor|regn:reg_W
+ 29. altsyncram Parameter Settings by Entity Instance
+ 30. Port Connectivity Checks: "proc:processor|regn:reg_W"
+ 31. Port Connectivity Checks: "proc:processor|counterlpm:reg_7"
+ 32. Port Connectivity Checks: "proc:processor|dec3to8:decY"
+ 33. Port Connectivity Checks: "proc:processor|dec3to8:decX"
+ 34. Port Connectivity Checks: "proc:processor"
+ 35. Port Connectivity Checks: "ramlpm:memory"
+ 36. Elapsed Time Per Partition
+ 37. Analysis & Synthesis Messages
 
 
 
@@ -69,7 +68,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jul 21 22:15:05 2021           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jul 22 11:34:59 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; pratica2                                        ;
 ; Top-level Entity Name              ; pratica2                                        ;
@@ -187,46 +186,46 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                              ;
-+----------------------------------+-----------------+----------------------------------+-----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                      ; Library ;
-+----------------------------------+-----------------+----------------------------------+-----------------------------------------------------------------------------------+---------+
-; ifetch.v                         ; yes             ; User Verilog HDL File            ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/ifetch.v               ;         ;
-; tlb.v                            ; yes             ; User Verilog HDL File            ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/tlb.v                  ;         ;
-; pratica2.v                       ; yes             ; User Verilog HDL File            ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/pratica2.v             ;         ;
-; dec3to5.v                        ; yes             ; User Verilog HDL File            ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/dec3to5.v              ;         ;
-; proc.v                           ; yes             ; User Verilog HDL File            ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/proc.v                 ;         ;
-; upcount.v                        ; yes             ; User Verilog HDL File            ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/upcount.v              ;         ;
-; regn.v                           ; yes             ; User Verilog HDL File            ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/regn.v                 ;         ;
-; multiplex.v                      ; yes             ; User Verilog HDL File            ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/multiplex.v            ;         ;
-; alu.v                            ; yes             ; User Verilog HDL File            ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/alu.v                  ;         ;
-; memoryMif.mif                    ; yes             ; User Memory Initialization File  ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/memoryMif.mif          ;         ;
-; ramlpm.v                         ; yes             ; User Wizard-Generated File       ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/ramlpm.v               ;         ;
-; romlpm.v                         ; yes             ; User Wizard-Generated File       ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/romlpm.v               ;         ;
-; counterlpm.v                     ; yes             ; User Wizard-Generated File       ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/counterlpm.v           ;         ;
-; romMif.mif                       ; yes             ; User Memory Initialization File  ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/romMif.mif             ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                  ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc           ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                     ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                  ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                  ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                   ;         ;
-; altrom.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                      ;         ;
-; altram.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                      ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                    ;         ;
-; db/altsyncram_21a1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/db/altsyncram_21a1.tdf ;         ;
-; db/altsyncram_eli1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/db/altsyncram_eli1.tdf ;         ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.tdf                 ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc                ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc                 ;         ;
-; cmpconst.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cmpconst.inc                    ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc                 ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc                 ;         ;
-; dffeea.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/dffeea.inc                      ;         ;
-; alt_counter_stratix.inc          ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc         ;         ;
-; db/cntr_akk.tdf                  ; yes             ; Auto-Generated Megafunction      ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/db/cntr_akk.tdf        ;         ;
-+----------------------------------+-----------------+----------------------------------+-----------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                         ;
++----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                                                                 ; Library ;
++----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------+
+; tlb.v                            ; yes             ; User Verilog HDL File            ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/tlb.v                  ;         ;
+; pratica2.v                       ; yes             ; User Verilog HDL File            ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/pratica2.v             ;         ;
+; proc.v                           ; yes             ; User Verilog HDL File            ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/proc.v                 ;         ;
+; upcount.v                        ; yes             ; User Verilog HDL File            ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/upcount.v              ;         ;
+; regn.v                           ; yes             ; User Verilog HDL File            ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/regn.v                 ;         ;
+; memoryMif.mif                    ; yes             ; User Memory Initialization File  ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/memoryMif.mif          ;         ;
+; ramlpm.v                         ; yes             ; User Wizard-Generated File       ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/ramlpm.v               ;         ;
+; romlpm.v                         ; yes             ; User Wizard-Generated File       ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/romlpm.v               ;         ;
+; counterlpm.v                     ; yes             ; User Wizard-Generated File       ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/counterlpm.v           ;         ;
+; romMif.mif                       ; yes             ; User Memory Initialization File  ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/romMif.mif             ;         ;
+; dec3to8.v                        ; yes             ; User Verilog HDL File            ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/dec3to8.v              ;         ;
+; instructionFetch.v               ; yes             ; User Verilog HDL File            ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/instructionFetch.v     ;         ;
+; ULA.v                            ; yes             ; User Verilog HDL File            ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/ULA.v                  ;         ;
+; MUX.v                            ; yes             ; User Verilog HDL File            ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/MUX.v                  ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                                             ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                      ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                                                ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                                             ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                             ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                                              ;         ;
+; altrom.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                                                 ;         ;
+; altram.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                                                 ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                                               ;         ;
+; db/altsyncram_21a1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/db/altsyncram_21a1.tdf ;         ;
+; db/altsyncram_eli1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/db/altsyncram_eli1.tdf ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.tdf                                                            ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc                                                           ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                            ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cmpconst.inc                                                               ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc                                                            ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc                                                            ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/dffeea.inc                                                                 ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                                    ;         ;
+; db/cntr_akk.tdf                  ; yes             ; Auto-Generated Megafunction      ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/db/cntr_akk.tdf        ;         ;
++----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------+
@@ -253,50 +252,39 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                          ;
-+--------+--------------+---------+--------------+--------------+--------------------------------------+-------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                      ; IP Include File                                                         ;
-+--------+--------------+---------+--------------+--------------+--------------------------------------+-------------------------------------------------------------------------+
-; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |pratica2|ifetch:ifetch|romlpm:addrs ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/romlpm.v     ;
-; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |pratica2|ramlpm:memory              ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/ramlpm.v     ;
-; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |pratica2|proc:proc|counterlpm:count ; C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/counterlpm.v ;
-+--------+--------------+---------+--------------+--------------+--------------------------------------+-------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                              ;
-+------------------------------------------------------------------------------------------------------------+--------------------+
-; Register name                                                                                              ; Reason for Removal ;
-+------------------------------------------------------------------------------------------------------------+--------------------+
-; proc:proc|regn:reg_W|Q[0]                                                                                  ; Lost fanout        ;
-; proc:proc|regn:reg_Dout|Q[0..15]                                                                           ; Lost fanout        ;
-; proc:proc|regn:reg_Addr|Q[0..4]                                                                            ; Lost fanout        ;
-; proc:proc|regn:reg_IR|Q[0..9]                                                                              ; Lost fanout        ;
-; proc:proc|regn:reg_G|Q[0..15]                                                                              ; Lost fanout        ;
-; proc:proc|regn:reg_A|Q[0..15]                                                                              ; Lost fanout        ;
-; proc:proc|counterlpm:count|lpm_counter:LPM_COUNTER_component|cntr_akk:auto_generated|counter_reg_bit[0..5] ; Lost fanout        ;
-; proc:proc|regn:reg_6|Q[0..15]                                                                              ; Lost fanout        ;
-; proc:proc|regn:reg_5|Q[0..15]                                                                              ; Lost fanout        ;
-; proc:proc|regn:reg_4|Q[0..15]                                                                              ; Lost fanout        ;
-; proc:proc|regn:reg_3|Q[0..15]                                                                              ; Lost fanout        ;
-; proc:proc|regn:reg_2|Q[0..15]                                                                              ; Lost fanout        ;
-; proc:proc|regn:reg_1|Q[0..15]                                                                              ; Lost fanout        ;
-; proc:proc|regn:reg_0|Q[0..15]                                                                              ; Lost fanout        ;
-; proc:proc|upcount:tstep|Q[0,1]                                                                             ; Lost fanout        ;
-; Total Number of Removed Registers = 184                                                                    ;                    ;
-+------------------------------------------------------------------------------------------------------------+--------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                             ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                              ; IP Include File                                                                                                    ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |pratica2|instructionFetch:iF|romlpm:address ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/romlpm.v     ;
+; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |pratica2|ramlpm:memory                      ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/ramlpm.v     ;
+; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |pratica2|proc:processor|counterlpm:reg_7    ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/counterlpm.v ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                          ;
-+---------------------------+--------------------+-------------------------------------------------------------------------------------+
-; Register name             ; Reason for Removal ; Registers Removed due to This Register                                              ;
-+---------------------------+--------------------+-------------------------------------------------------------------------------------+
-; proc:proc|regn:reg_W|Q[0] ; Lost Fanouts       ; proc:proc|regn:reg_IR|Q[0], proc:proc|regn:reg_IR|Q[1], proc:proc|regn:reg_IR|Q[2], ;
-;                           ;                    ; proc:proc|regn:reg_IR|Q[3], proc:proc|upcount:tstep|Q[0],                           ;
-;                           ;                    ; proc:proc|upcount:tstep|Q[1]                                                        ;
-+---------------------------+--------------------+-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                   ;
++-----------------------------------------------------------------------------------------------------------------+--------------------+
+; Register name                                                                                                   ; Reason for Removal ;
++-----------------------------------------------------------------------------------------------------------------+--------------------+
+; proc:processor|regn:reg_W|Q[0]                                                                                  ; Lost fanout        ;
+; proc:processor|regn:reg_Dout|Q[0..15]                                                                           ; Lost fanout        ;
+; proc:processor|regn:reg_Addr|Q[0..4]                                                                            ; Lost fanout        ;
+; proc:processor|regn:reg_IR|Q[0..9]                                                                              ; Lost fanout        ;
+; proc:processor|regn:reg_G|Q[0..15]                                                                              ; Lost fanout        ;
+; proc:processor|regn:reg_A|Q[0..15]                                                                              ; Lost fanout        ;
+; proc:processor|counterlpm:reg_7|lpm_counter:LPM_COUNTER_component|cntr_akk:auto_generated|counter_reg_bit[0..5] ; Lost fanout        ;
+; proc:processor|regn:reg_6|Q[0..15]                                                                              ; Lost fanout        ;
+; proc:processor|regn:reg_5|Q[0..15]                                                                              ; Lost fanout        ;
+; proc:processor|regn:reg_4|Q[0..15]                                                                              ; Lost fanout        ;
+; proc:processor|regn:reg_3|Q[0..15]                                                                              ; Lost fanout        ;
+; proc:processor|regn:reg_2|Q[0..15]                                                                              ; Lost fanout        ;
+; proc:processor|regn:reg_1|Q[0..15]                                                                              ; Lost fanout        ;
+; proc:processor|regn:reg_0|Q[0..15]                                                                              ; Lost fanout        ;
+; proc:processor|upcount:tstep|Q[0,1]                                                                             ; Lost fanout        ;
+; Total Number of Removed Registers = 184                                                                         ;                    ;
++-----------------------------------------------------------------------------------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -314,13 +302,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Source assignments for ifetch:ifetch|romlpm:addrs|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated ;
-+---------------------------------+--------------------+------+----------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                 ;
-+---------------------------------+--------------------+------+----------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                  ;
-+---------------------------------+--------------------+------+----------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for instructionFetch:iF|romlpm:address|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                         ;
++---------------------------------+--------------------+------+------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                          ;
++---------------------------------+--------------------+------+------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -332,64 +320,64 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+------+---------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ifetch:ifetch|romlpm:addrs|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+---------------------------------------------+
-; Parameter Name                     ; Value                ; Type                                        ;
-+------------------------------------+----------------------+---------------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                     ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                  ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                              ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                                     ;
-; OPERATION_MODE                     ; ROM                  ; Untyped                                     ;
-; WIDTH_A                            ; 6                    ; Signed Integer                              ;
-; WIDTHAD_A                          ; 6                    ; Signed Integer                              ;
-; NUMWORDS_A                         ; 64                   ; Signed Integer                              ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                     ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                     ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                     ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                     ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                                     ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                     ;
-; WIDTH_B                            ; 1                    ; Untyped                                     ;
-; WIDTHAD_B                          ; 1                    ; Untyped                                     ;
-; NUMWORDS_B                         ; 1                    ; Untyped                                     ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                                     ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                     ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                     ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                     ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                     ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                     ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                                     ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                     ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                     ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                     ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                     ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                     ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                              ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                     ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                     ;
-; BYTE_SIZE                          ; 8                    ; Untyped                                     ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                     ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                     ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                     ;
-; INIT_FILE                          ; romMif.mif           ; Untyped                                     ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                     ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                     ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                     ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                     ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                     ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                     ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                     ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                     ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                                     ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                     ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                     ;
-; DEVICE_FAMILY                      ; Cyclone IV GX        ; Untyped                                     ;
-; CBXI_PARAMETER                     ; altsyncram_21a1      ; Untyped                                     ;
-+------------------------------------+----------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: instructionFetch:iF|romlpm:address|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                ;
++------------------------------------+----------------------+-----------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                             ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                          ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                        ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                        ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                      ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                             ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                             ;
+; WIDTH_A                            ; 6                    ; Signed Integer                                      ;
+; WIDTHAD_A                          ; 6                    ; Signed Integer                                      ;
+; NUMWORDS_A                         ; 64                   ; Signed Integer                                      ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                             ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                             ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                             ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                             ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                             ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                             ;
+; WIDTH_B                            ; 1                    ; Untyped                                             ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                             ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                             ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                             ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                             ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                             ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                             ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                             ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                             ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                             ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                             ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                             ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                             ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                             ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                             ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                      ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                             ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                             ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                             ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                             ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                             ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                             ;
+; INIT_FILE                          ; romMif.mif           ; Untyped                                             ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                             ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                             ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                             ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                             ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                             ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                             ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                             ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                             ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                             ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                             ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                             ;
+; DEVICE_FAMILY                      ; Cyclone IV GX        ; Untyped                                             ;
+; CBXI_PARAMETER                     ; altsyncram_21a1      ; Untyped                                             ;
++------------------------------------+----------------------+-----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -454,232 +442,232 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: proc:proc|regn:reg_0 ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; n              ; 16    ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: proc:processor|regn:reg_0 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; n              ; 16    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: proc:proc|regn:reg_1 ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; n              ; 16    ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: proc:processor|regn:reg_1 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; n              ; 16    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: proc:proc|regn:reg_2 ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; n              ; 16    ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: proc:processor|regn:reg_2 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; n              ; 16    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: proc:proc|regn:reg_3 ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; n              ; 16    ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: proc:processor|regn:reg_3 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; n              ; 16    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: proc:proc|regn:reg_4 ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; n              ; 16    ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: proc:processor|regn:reg_4 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; n              ; 16    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: proc:proc|regn:reg_5 ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; n              ; 16    ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: proc:processor|regn:reg_5 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; n              ; 16    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: proc:proc|regn:reg_6 ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; n              ; 16    ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: proc:processor|regn:reg_6 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; n              ; 16    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: proc:proc|counterlpm:count|lpm_counter:LPM_COUNTER_component ;
-+------------------------+---------------+------------------------------------------------------------------+
-; Parameter Name         ; Value         ; Type                                                             ;
-+------------------------+---------------+------------------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON            ; AUTO_CARRY                                                       ;
-; IGNORE_CARRY_BUFFERS   ; OFF           ; IGNORE_CARRY                                                     ;
-; AUTO_CASCADE_CHAINS    ; ON            ; AUTO_CASCADE                                                     ;
-; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE                                                   ;
-; LPM_WIDTH              ; 6             ; Signed Integer                                                   ;
-; LPM_DIRECTION          ; UP            ; Untyped                                                          ;
-; LPM_MODULUS            ; 0             ; Untyped                                                          ;
-; LPM_AVALUE             ; UNUSED        ; Untyped                                                          ;
-; LPM_SVALUE             ; UNUSED        ; Untyped                                                          ;
-; LPM_PORT_UPDOWN        ; PORT_UNUSED   ; Untyped                                                          ;
-; DEVICE_FAMILY          ; Cyclone IV GX ; Untyped                                                          ;
-; CARRY_CHAIN            ; MANUAL        ; Untyped                                                          ;
-; CARRY_CHAIN_LENGTH     ; 48            ; CARRY_CHAIN_LENGTH                                               ;
-; NOT_GATE_PUSH_BACK     ; ON            ; NOT_GATE_PUSH_BACK                                               ;
-; CARRY_CNT_EN           ; SMART         ; Untyped                                                          ;
-; LABWIDE_SCLR           ; ON            ; Untyped                                                          ;
-; USE_NEW_VERSION        ; TRUE          ; Untyped                                                          ;
-; CBXI_PARAMETER         ; cntr_akk      ; Untyped                                                          ;
-+------------------------+---------------+------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: proc:processor|counterlpm:reg_7|lpm_counter:LPM_COUNTER_component ;
++------------------------+---------------+-----------------------------------------------------------------------+
+; Parameter Name         ; Value         ; Type                                                                  ;
++------------------------+---------------+-----------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON            ; AUTO_CARRY                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF           ; IGNORE_CARRY                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON            ; AUTO_CASCADE                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE                                                        ;
+; LPM_WIDTH              ; 6             ; Signed Integer                                                        ;
+; LPM_DIRECTION          ; UP            ; Untyped                                                               ;
+; LPM_MODULUS            ; 0             ; Untyped                                                               ;
+; LPM_AVALUE             ; UNUSED        ; Untyped                                                               ;
+; LPM_SVALUE             ; UNUSED        ; Untyped                                                               ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED   ; Untyped                                                               ;
+; DEVICE_FAMILY          ; Cyclone IV GX ; Untyped                                                               ;
+; CARRY_CHAIN            ; MANUAL        ; Untyped                                                               ;
+; CARRY_CHAIN_LENGTH     ; 48            ; CARRY_CHAIN_LENGTH                                                    ;
+; NOT_GATE_PUSH_BACK     ; ON            ; NOT_GATE_PUSH_BACK                                                    ;
+; CARRY_CNT_EN           ; SMART         ; Untyped                                                               ;
+; LABWIDE_SCLR           ; ON            ; Untyped                                                               ;
+; USE_NEW_VERSION        ; TRUE          ; Untyped                                                               ;
+; CBXI_PARAMETER         ; cntr_akk      ; Untyped                                                               ;
++------------------------+---------------+-----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: proc:proc|regn:reg_A ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; n              ; 16    ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: proc:processor|regn:reg_A ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; n              ; 16    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: proc:proc|regn:reg_G ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; n              ; 16    ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: proc:processor|regn:reg_G ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; n              ; 16    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: proc:proc|regn:reg_IR ;
-+----------------+-------+-------------------------------------------+
-; Parameter Name ; Value ; Type                                      ;
-+----------------+-------+-------------------------------------------+
-; n              ; 10    ; Signed Integer                            ;
-+----------------+-------+-------------------------------------------+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: proc:processor|regn:reg_IR ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; n              ; 10    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: proc:proc|regn:reg_Addr ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; n              ; 16    ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: proc:processor|regn:reg_Addr ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; n              ; 16    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: proc:proc|regn:reg_Dout ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; n              ; 16    ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: proc:processor|regn:reg_Dout ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; n              ; 16    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: proc:proc|regn:reg_W ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; n              ; 1     ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: proc:processor|regn:reg_W ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; n              ; 1     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                                       ;
-+-------------------------------------------+------------------------------------------------------------+
-; Name                                      ; Value                                                      ;
-+-------------------------------------------+------------------------------------------------------------+
-; Number of entity instances                ; 2                                                          ;
-; Entity Instance                           ; ifetch:ifetch|romlpm:addrs|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; ROM                                                        ;
-;     -- WIDTH_A                            ; 6                                                          ;
-;     -- NUMWORDS_A                         ; 64                                                         ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                               ;
-;     -- WIDTH_B                            ; 1                                                          ;
-;     -- NUMWORDS_B                         ; 1                                                          ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                     ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                               ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                       ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                  ;
-; Entity Instance                           ; ramlpm:memory|altsyncram:altsyncram_component              ;
-;     -- OPERATION_MODE                     ; SINGLE_PORT                                                ;
-;     -- WIDTH_A                            ; 16                                                         ;
-;     -- NUMWORDS_A                         ; 64                                                         ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                               ;
-;     -- WIDTH_B                            ; 1                                                          ;
-;     -- NUMWORDS_B                         ; 1                                                          ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                     ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                               ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                       ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                  ;
-+-------------------------------------------+------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                               ;
++-------------------------------------------+--------------------------------------------------------------------+
+; Name                                      ; Value                                                              ;
++-------------------------------------------+--------------------------------------------------------------------+
+; Number of entity instances                ; 2                                                                  ;
+; Entity Instance                           ; instructionFetch:iF|romlpm:address|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                                ;
+;     -- WIDTH_A                            ; 6                                                                  ;
+;     -- NUMWORDS_A                         ; 64                                                                 ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                       ;
+;     -- WIDTH_B                            ; 1                                                                  ;
+;     -- NUMWORDS_B                         ; 1                                                                  ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                             ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                       ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                               ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                          ;
+; Entity Instance                           ; ramlpm:memory|altsyncram:altsyncram_component                      ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                        ;
+;     -- WIDTH_A                            ; 16                                                                 ;
+;     -- NUMWORDS_A                         ; 64                                                                 ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                       ;
+;     -- WIDTH_B                            ; 1                                                                  ;
+;     -- NUMWORDS_B                         ; 1                                                                  ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                             ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                       ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                               ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                          ;
++-------------------------------------------+--------------------------------------------------------------------+
 
 
-+--------------------------------------------------+
-; Port Connectivity Checks: "proc:proc|regn:reg_W" ;
-+------+-------+----------+------------------------+
-; Port ; Type  ; Severity ; Details                ;
-+------+-------+----------+------------------------+
-; Rin  ; Input ; Info     ; Stuck at VCC           ;
-+------+-------+----------+------------------------+
++-------------------------------------------------------+
+; Port Connectivity Checks: "proc:processor|regn:reg_W" ;
++------+-------+----------+-----------------------------+
+; Port ; Type  ; Severity ; Details                     ;
++------+-------+----------+-----------------------------+
+; Rin  ; Input ; Info     ; Stuck at VCC                ;
++------+-------+----------+-----------------------------+
 
 
-+--------------------------------------------------------+
-; Port Connectivity Checks: "proc:proc|counterlpm:count" ;
-+--------+-------+----------+----------------------------+
-; Port   ; Type  ; Severity ; Details                    ;
-+--------+-------+----------+----------------------------+
-; clk_en ; Input ; Info     ; Stuck at VCC               ;
-+--------+-------+----------+----------------------------+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "proc:processor|counterlpm:reg_7" ;
++--------+-------+----------+---------------------------------+
+; Port   ; Type  ; Severity ; Details                         ;
++--------+-------+----------+---------------------------------+
+; clk_en ; Input ; Info     ; Stuck at VCC                    ;
++--------+-------+----------+---------------------------------+
 
 
-+----------------------------------------------------+
-; Port Connectivity Checks: "proc:proc|dec3to8:decY" ;
-+------+-------+----------+--------------------------+
-; Port ; Type  ; Severity ; Details                  ;
-+------+-------+----------+--------------------------+
-; En   ; Input ; Info     ; Stuck at VCC             ;
-+------+-------+----------+--------------------------+
++---------------------------------------------------------+
+; Port Connectivity Checks: "proc:processor|dec3to8:decY" ;
++------+-------+----------+-------------------------------+
+; Port ; Type  ; Severity ; Details                       ;
++------+-------+----------+-------------------------------+
+; En   ; Input ; Info     ; Stuck at VCC                  ;
++------+-------+----------+-------------------------------+
 
 
-+----------------------------------------------------+
-; Port Connectivity Checks: "proc:proc|dec3to8:decX" ;
-+------+-------+----------+--------------------------+
-; Port ; Type  ; Severity ; Details                  ;
-+------+-------+----------+--------------------------+
-; En   ; Input ; Info     ; Stuck at VCC             ;
-+------+-------+----------+--------------------------+
++---------------------------------------------------------+
+; Port Connectivity Checks: "proc:processor|dec3to8:decX" ;
++------+-------+----------+-------------------------------+
+; Port ; Type  ; Severity ; Details                       ;
++------+-------+----------+-------------------------------+
+; En   ; Input ; Info     ; Stuck at VCC                  ;
++------+-------+----------+-------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "proc:proc"                                                                                  ;
+; Port Connectivity Checks: "proc:processor"                                                                             ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port         ; Type   ; Severity ; Details                                                                             ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -713,18 +701,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jul 21 22:15:04 2021
+    Info: Processing started: Thu Jul 22 11:34:57 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pratica2 -c pratica2
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file ifetch.v
-    Info (12023): Found entity 1: ifetch
+Warning (12019): Can't analyze file -- file ifetch.v is missing
 Warning (10463): Verilog HDL Declaration warning at tlb.v(10): "break" is SystemVerilog-2005 keyword
 Info (12021): Found 1 design units, including 1 entities, in source file tlb.v
-    Info (12023): Found entity 1: tlb
+    Info (12023): Found entity 1: TLB
 Info (12021): Found 1 design units, including 1 entities, in source file pratica2.v
     Info (12023): Found entity 1: pratica2
-Info (12021): Found 1 design units, including 1 entities, in source file dec3to5.v
-    Info (12023): Found entity 1: dec3to8
+Warning (12019): Can't analyze file -- file dec3to5.v is missing
 Warning (12019): Can't analyze file -- file dec3to4.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file proc.v
     Info (12023): Found entity 1: proc
@@ -733,23 +719,29 @@ Info (12021): Found 2 design units, including 2 entities, in source file upcount
     Info (12023): Found entity 2: upcount_5
 Info (12021): Found 1 design units, including 1 entities, in source file regn.v
     Info (12023): Found entity 1: regn
-Info (12021): Found 1 design units, including 1 entities, in source file multiplex.v
-    Info (12023): Found entity 1: multiplex
-Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: alu
+Warning (12019): Can't analyze file -- file multiplex.v is missing
+Warning (12019): Can't analyze file -- file alu.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file ramlpm.v
     Info (12023): Found entity 1: ramlpm
 Info (12021): Found 1 design units, including 1 entities, in source file romlpm.v
     Info (12023): Found entity 1: romlpm
 Info (12021): Found 1 design units, including 1 entities, in source file counterlpm.v
     Info (12023): Found entity 1: counterlpm
-Warning (12019): Can't analyze file -- file dec3to8.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file dec3to8.v
+    Info (12023): Found entity 1: dec3to8
+Info (12021): Found 1 design units, including 1 entities, in source file instructionfetch.v
+    Info (12023): Found entity 1: instructionFetch
+Info (12021): Found 1 design units, including 1 entities, in source file ula.v
+    Info (12023): Found entity 1: ULA
+Warning (12090): Entity "MUX" obtained from "MUX.v" instead of from Quartus II megafunction library
+Info (12021): Found 1 design units, including 1 entities, in source file mux.v
+    Info (12023): Found entity 1: MUX
 Info (12127): Elaborating entity "pratica2" for the top level hierarchy
-Info (12128): Elaborating entity "ifetch" for hierarchy "ifetch:ifetch"
-Info (12128): Elaborating entity "romlpm" for hierarchy "ifetch:ifetch|romlpm:addrs"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "ifetch:ifetch|romlpm:addrs|altsyncram:altsyncram_component"
-Info (12130): Elaborated megafunction instantiation "ifetch:ifetch|romlpm:addrs|altsyncram:altsyncram_component"
-Info (12133): Instantiated megafunction "ifetch:ifetch|romlpm:addrs|altsyncram:altsyncram_component" with the following parameter:
+Info (12128): Elaborating entity "instructionFetch" for hierarchy "instructionFetch:iF"
+Info (12128): Elaborating entity "romlpm" for hierarchy "instructionFetch:iF|romlpm:address"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "instructionFetch:iF|romlpm:address|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "instructionFetch:iF|romlpm:address|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "instructionFetch:iF|romlpm:address|altsyncram:altsyncram_component" with the following parameter:
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -766,13 +758,13 @@ Info (12133): Instantiated megafunction "ifetch:ifetch|romlpm:addrs|altsyncram:a
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_21a1.tdf
     Info (12023): Found entity 1: altsyncram_21a1
-Info (12128): Elaborating entity "altsyncram_21a1" for hierarchy "ifetch:ifetch|romlpm:addrs|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated"
-Info (12128): Elaborating entity "tlb" for hierarchy "ifetch:ifetch|tlb:tableTLB"
-Warning (10855): Verilog HDL warning at tlb.v(12): initial value for variable virtualAddress should be constant
-Warning (10030): Net "virtualAddress[0..39]" at tlb.v(7) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "physicalAddres.data_a" at tlb.v(8) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "physicalAddres.waddr_a" at tlb.v(8) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "physicalAddres.we_a" at tlb.v(8) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "altsyncram_21a1" for hierarchy "instructionFetch:iF|romlpm:address|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated"
+Info (12128): Elaborating entity "TLB" for hierarchy "instructionFetch:iF|TLB:tlb"
+Warning (10855): Verilog HDL warning at tlb.v(12): initial value for variable vP should be constant
+Warning (10030): Net "vP[0..39]" at tlb.v(7) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "fP.data_a" at tlb.v(8) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "fP.waddr_a" at tlb.v(8) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "fP.we_a" at tlb.v(8) has no driver or initial value, using a default initial value '0'
 Info (12128): Elaborating entity "ramlpm" for hierarchy "ramlpm:memory"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ramlpm:memory|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "ramlpm:memory|altsyncram:altsyncram_component"
@@ -795,89 +787,81 @@ Info (12133): Instantiated megafunction "ramlpm:memory|altsyncram:altsyncram_com
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_eli1.tdf
     Info (12023): Found entity 1: altsyncram_eli1
 Info (12128): Elaborating entity "altsyncram_eli1" for hierarchy "ramlpm:memory|altsyncram:altsyncram_component|altsyncram_eli1:auto_generated"
-Info (12128): Elaborating entity "proc" for hierarchy "proc:proc"
-Warning (10036): Verilog HDL or VHDL warning at proc.v(25): object "memOut" assigned a value but never read
-Warning (10235): Verilog HDL Always Construct warning at proc.v(52): variable "Run" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at proc.v(81): variable "G" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10270): Verilog HDL Case Statement warning at proc.v(62): incomplete case statement has no default case item
+Info (12128): Elaborating entity "proc" for hierarchy "proc:processor"
+Warning (10235): Verilog HDL Always Construct warning at proc.v(56): variable "Run" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at proc.v(79): variable "G" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at proc.v(66): incomplete case statement has no default case item
 Warning (10270): Verilog HDL Case Statement warning at proc.v(135): incomplete case statement has no default case item
-Info (12128): Elaborating entity "dec3to8" for hierarchy "proc:proc|dec3to8:decX"
-Info (12128): Elaborating entity "upcount" for hierarchy "proc:proc|upcount:tstep"
-Info (12128): Elaborating entity "regn" for hierarchy "proc:proc|regn:reg_0"
-Info (12128): Elaborating entity "counterlpm" for hierarchy "proc:proc|counterlpm:count"
-Info (12128): Elaborating entity "lpm_counter" for hierarchy "proc:proc|counterlpm:count|lpm_counter:LPM_COUNTER_component"
-Info (12130): Elaborated megafunction instantiation "proc:proc|counterlpm:count|lpm_counter:LPM_COUNTER_component"
-Info (12133): Instantiated megafunction "proc:proc|counterlpm:count|lpm_counter:LPM_COUNTER_component" with the following parameter:
+Info (12128): Elaborating entity "dec3to8" for hierarchy "proc:processor|dec3to8:decX"
+Info (12128): Elaborating entity "upcount" for hierarchy "proc:processor|upcount:tstep"
+Info (12128): Elaborating entity "regn" for hierarchy "proc:processor|regn:reg_0"
+Info (12128): Elaborating entity "counterlpm" for hierarchy "proc:processor|counterlpm:reg_7"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "proc:processor|counterlpm:reg_7|lpm_counter:LPM_COUNTER_component"
+Info (12130): Elaborated megafunction instantiation "proc:processor|counterlpm:reg_7|lpm_counter:LPM_COUNTER_component"
+Info (12133): Instantiated megafunction "proc:processor|counterlpm:reg_7|lpm_counter:LPM_COUNTER_component" with the following parameter:
     Info (12134): Parameter "lpm_direction" = "UP"
     Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
     Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
     Info (12134): Parameter "lpm_width" = "6"
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_akk.tdf
     Info (12023): Found entity 1: cntr_akk
-Info (12128): Elaborating entity "cntr_akk" for hierarchy "proc:proc|counterlpm:count|lpm_counter:LPM_COUNTER_component|cntr_akk:auto_generated"
-Info (12128): Elaborating entity "alu" for hierarchy "proc:proc|alu:alu"
-Warning (10270): Verilog HDL Case Statement warning at alu.v(8): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at alu.v(8): inferring latch(es) for variable "G", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "G[0]" at alu.v(8)
-Info (10041): Inferred latch for "G[1]" at alu.v(8)
-Info (10041): Inferred latch for "G[2]" at alu.v(8)
-Info (10041): Inferred latch for "G[3]" at alu.v(8)
-Info (10041): Inferred latch for "G[4]" at alu.v(8)
-Info (10041): Inferred latch for "G[5]" at alu.v(8)
-Info (10041): Inferred latch for "G[6]" at alu.v(8)
-Info (10041): Inferred latch for "G[7]" at alu.v(8)
-Info (10041): Inferred latch for "G[8]" at alu.v(8)
-Info (10041): Inferred latch for "G[9]" at alu.v(8)
-Info (10041): Inferred latch for "G[10]" at alu.v(8)
-Info (10041): Inferred latch for "G[11]" at alu.v(8)
-Info (10041): Inferred latch for "G[12]" at alu.v(8)
-Info (10041): Inferred latch for "G[13]" at alu.v(8)
-Info (10041): Inferred latch for "G[14]" at alu.v(8)
-Info (10041): Inferred latch for "G[15]" at alu.v(8)
-Info (12128): Elaborating entity "regn" for hierarchy "proc:proc|regn:reg_IR"
+Info (12128): Elaborating entity "cntr_akk" for hierarchy "proc:processor|counterlpm:reg_7|lpm_counter:LPM_COUNTER_component|cntr_akk:auto_generated"
+Info (12128): Elaborating entity "ULA" for hierarchy "proc:processor|ULA:ula"
+Warning (10270): Verilog HDL Case Statement warning at ULA.v(8): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at ULA.v(8): inferring latch(es) for variable "G", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "G[0]" at ULA.v(8)
+Info (10041): Inferred latch for "G[1]" at ULA.v(8)
+Info (10041): Inferred latch for "G[2]" at ULA.v(8)
+Info (10041): Inferred latch for "G[3]" at ULA.v(8)
+Info (10041): Inferred latch for "G[4]" at ULA.v(8)
+Info (10041): Inferred latch for "G[5]" at ULA.v(8)
+Info (10041): Inferred latch for "G[6]" at ULA.v(8)
+Info (10041): Inferred latch for "G[7]" at ULA.v(8)
+Info (10041): Inferred latch for "G[8]" at ULA.v(8)
+Info (10041): Inferred latch for "G[9]" at ULA.v(8)
+Info (10041): Inferred latch for "G[10]" at ULA.v(8)
+Info (10041): Inferred latch for "G[11]" at ULA.v(8)
+Info (10041): Inferred latch for "G[12]" at ULA.v(8)
+Info (10041): Inferred latch for "G[13]" at ULA.v(8)
+Info (10041): Inferred latch for "G[14]" at ULA.v(8)
+Info (10041): Inferred latch for "G[15]" at ULA.v(8)
+Info (12128): Elaborating entity "regn" for hierarchy "proc:processor|regn:reg_IR"
 Warning (10230): Verilog HDL assignment warning at regn.v(9): truncated value with size 16 to match size of target (10)
 Warning (10230): Verilog HDL assignment warning at regn.v(16): truncated value with size 16 to match size of target (10)
-Info (12128): Elaborating entity "regn" for hierarchy "proc:proc|regn:reg_W"
+Info (12128): Elaborating entity "regn" for hierarchy "proc:processor|regn:reg_W"
 Warning (10230): Verilog HDL assignment warning at regn.v(9): truncated value with size 16 to match size of target (1)
 Warning (10230): Verilog HDL assignment warning at regn.v(16): truncated value with size 16 to match size of target (1)
-Info (12128): Elaborating entity "multiplex" for hierarchy "proc:proc|multiplex:multiplex"
-Warning (10235): Verilog HDL Always Construct warning at multiplex.v(18): variable "din" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at multiplex.v(19): variable "r0" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at multiplex.v(20): variable "r1" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at multiplex.v(21): variable "r2" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at multiplex.v(22): variable "r3" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at multiplex.v(23): variable "r4" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at multiplex.v(24): variable "r5" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at multiplex.v(25): variable "r6" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at multiplex.v(26): variable "pc" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at multiplex.v(27): variable "g" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10270): Verilog HDL Case Statement warning at multiplex.v(17): incomplete case statement has no default case item
-Info (10264): Verilog HDL Case Statement information at multiplex.v(17): all case item expressions in this case statement are onehot
-Warning (10240): Verilog HDL Always Construct warning at multiplex.v(14): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "out[0]" at multiplex.v(14)
-Info (10041): Inferred latch for "out[1]" at multiplex.v(14)
-Info (10041): Inferred latch for "out[2]" at multiplex.v(14)
-Info (10041): Inferred latch for "out[3]" at multiplex.v(14)
-Info (10041): Inferred latch for "out[4]" at multiplex.v(14)
-Info (10041): Inferred latch for "out[5]" at multiplex.v(14)
-Info (10041): Inferred latch for "out[6]" at multiplex.v(14)
-Info (10041): Inferred latch for "out[7]" at multiplex.v(14)
-Info (10041): Inferred latch for "out[8]" at multiplex.v(14)
-Info (10041): Inferred latch for "out[9]" at multiplex.v(14)
-Info (10041): Inferred latch for "out[10]" at multiplex.v(14)
-Info (10041): Inferred latch for "out[11]" at multiplex.v(14)
-Info (10041): Inferred latch for "out[12]" at multiplex.v(14)
-Info (10041): Inferred latch for "out[13]" at multiplex.v(14)
-Info (10041): Inferred latch for "out[14]" at multiplex.v(14)
-Info (10041): Inferred latch for "out[15]" at multiplex.v(14)
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "ifetch:ifetch|romlpm:addrs|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated|q_a[0]"
-        Warning (14320): Synthesized away node "ifetch:ifetch|romlpm:addrs|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated|q_a[1]"
-        Warning (14320): Synthesized away node "ifetch:ifetch|romlpm:addrs|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated|q_a[2]"
-        Warning (14320): Synthesized away node "ifetch:ifetch|romlpm:addrs|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated|q_a[3]"
-        Warning (14320): Synthesized away node "ifetch:ifetch|romlpm:addrs|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated|q_a[4]"
-        Warning (14320): Synthesized away node "ifetch:ifetch|romlpm:addrs|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated|q_a[5]"
+Info (12128): Elaborating entity "MUX" for hierarchy "proc:processor|MUX:mux"
+Warning (10235): Verilog HDL Always Construct warning at MUX.v(12): variable "din" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at MUX.v(13): variable "r0" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at MUX.v(14): variable "r1" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at MUX.v(15): variable "r2" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at MUX.v(16): variable "r3" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at MUX.v(17): variable "r4" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at MUX.v(18): variable "r5" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at MUX.v(19): variable "r6" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at MUX.v(20): variable "pc" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at MUX.v(21): variable "g" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at MUX.v(22): variable "mem" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at MUX.v(11): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at MUX.v(11): all case item expressions in this case statement are onehot
+Warning (10240): Verilog HDL Always Construct warning at MUX.v(9): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "out[0]" at MUX.v(9)
+Info (10041): Inferred latch for "out[1]" at MUX.v(9)
+Info (10041): Inferred latch for "out[2]" at MUX.v(9)
+Info (10041): Inferred latch for "out[3]" at MUX.v(9)
+Info (10041): Inferred latch for "out[4]" at MUX.v(9)
+Info (10041): Inferred latch for "out[5]" at MUX.v(9)
+Info (10041): Inferred latch for "out[6]" at MUX.v(9)
+Info (10041): Inferred latch for "out[7]" at MUX.v(9)
+Info (10041): Inferred latch for "out[8]" at MUX.v(9)
+Info (10041): Inferred latch for "out[9]" at MUX.v(9)
+Info (10041): Inferred latch for "out[10]" at MUX.v(9)
+Info (10041): Inferred latch for "out[11]" at MUX.v(9)
+Info (10041): Inferred latch for "out[12]" at MUX.v(9)
+Info (10041): Inferred latch for "out[13]" at MUX.v(9)
+Info (10041): Inferred latch for "out[14]" at MUX.v(9)
+Info (10041): Inferred latch for "out[15]" at MUX.v(9)
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "ramlpm:memory|altsyncram:altsyncram_component|altsyncram_eli1:auto_generated|q_a[0]"
@@ -896,6 +880,12 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "ramlpm:memory|altsyncram:altsyncram_component|altsyncram_eli1:auto_generated|q_a[13]"
         Warning (14320): Synthesized away node "ramlpm:memory|altsyncram:altsyncram_component|altsyncram_eli1:auto_generated|q_a[14]"
         Warning (14320): Synthesized away node "ramlpm:memory|altsyncram:altsyncram_component|altsyncram_eli1:auto_generated|q_a[15]"
+        Warning (14320): Synthesized away node "instructionFetch:iF|romlpm:address|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated|q_a[0]"
+        Warning (14320): Synthesized away node "instructionFetch:iF|romlpm:address|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated|q_a[1]"
+        Warning (14320): Synthesized away node "instructionFetch:iF|romlpm:address|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated|q_a[2]"
+        Warning (14320): Synthesized away node "instructionFetch:iF|romlpm:address|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated|q_a[3]"
+        Warning (14320): Synthesized away node "instructionFetch:iF|romlpm:address|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated|q_a[4]"
+        Warning (14320): Synthesized away node "instructionFetch:iF|romlpm:address|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated|q_a[5]"
 Info (17049): 184 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -907,10 +897,10 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
 Info (21057): Implemented 4 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 63 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 65 warnings
     Info: Peak virtual memory: 4664 megabytes
-    Info: Processing ended: Wed Jul 21 22:15:05 2021
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Thu Jul 22 11:34:59 2021
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

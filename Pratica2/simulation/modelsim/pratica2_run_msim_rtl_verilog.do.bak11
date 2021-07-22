@@ -5,16 +5,16 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+C:/Users/erick/Downloads/aoc2-cefet-main\ (1)/Pratica2/code {C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/ifetch.v}
-vlog -vlog01compat -work work +incdir+C:/Users/erick/Downloads/aoc2-cefet-main\ (1)/Pratica2/code {C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/tlb.v}
-vlog -vlog01compat -work work +incdir+C:/Users/erick/Downloads/aoc2-cefet-main\ (1)/Pratica2/code {C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/pratica2.v}
-vlog -vlog01compat -work work +incdir+C:/Users/erick/Downloads/aoc2-cefet-main\ (1)/Pratica2/code {C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/dec3to5.v}
-vlog -vlog01compat -work work +incdir+C:/Users/erick/Downloads/aoc2-cefet-main\ (1)/Pratica2/code {C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/proc.v}
-vlog -vlog01compat -work work +incdir+C:/Users/erick/Downloads/aoc2-cefet-main\ (1)/Pratica2/code {C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/upcount.v}
-vlog -vlog01compat -work work +incdir+C:/Users/erick/Downloads/aoc2-cefet-main\ (1)/Pratica2/code {C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/regn.v}
-vlog -vlog01compat -work work +incdir+C:/Users/erick/Downloads/aoc2-cefet-main\ (1)/Pratica2/code {C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/multiplex.v}
-vlog -vlog01compat -work work +incdir+C:/Users/erick/Downloads/aoc2-cefet-main\ (1)/Pratica2/code {C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/alu.v}
-vlog -vlog01compat -work work +incdir+C:/Users/erick/Downloads/aoc2-cefet-main\ (1)/Pratica2/code {C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/ramlpm.v}
-vlog -vlog01compat -work work +incdir+C:/Users/erick/Downloads/aoc2-cefet-main\ (1)/Pratica2/code {C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/romlpm.v}
-vlog -vlog01compat -work work +incdir+C:/Users/erick/Downloads/aoc2-cefet-main\ (1)/Pratica2/code {C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/counterlpm.v}
+vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/tlb.v}
+vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/pratica2.v}
+vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/proc.v}
+vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/upcount.v}
+vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/regn.v}
+vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/ramlpm.v}
+vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/romlpm.v}
+vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/counterlpm.v}
+vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/dec3to8.v}
+vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/instructionFetch.v}
+vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/ULA.v}
+vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ II/Pratica-II-LAOC-II/Pratica2 {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/MUX.v}
 

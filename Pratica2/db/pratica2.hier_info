@@ -5,7 +5,7 @@ Resetn => Resetn.IN1
 Run => Run.IN1
 
 
-|pratica2|ifetch:ifetch
+|pratica2|instructionFetch:iF
 addr[0] => addr[0].IN1
 addr[1] => addr[1].IN1
 addr[2] => addr[2].IN1
@@ -13,25 +13,25 @@ addr[3] => addr[3].IN1
 addr[4] => addr[4].IN1
 addr[5] => addr[5].IN1
 MClock => MClock.IN2
-DIN[0] <= tlb:tableTLB.port2
-DIN[1] <= tlb:tableTLB.port2
-DIN[2] <= tlb:tableTLB.port2
-DIN[3] <= tlb:tableTLB.port2
-DIN[4] <= tlb:tableTLB.port2
-DIN[5] <= tlb:tableTLB.port2
-DIN[6] <= tlb:tableTLB.port2
-DIN[7] <= tlb:tableTLB.port2
-DIN[8] <= tlb:tableTLB.port2
-DIN[9] <= tlb:tableTLB.port2
-DIN[10] <= tlb:tableTLB.port2
-DIN[11] <= tlb:tableTLB.port2
-DIN[12] <= tlb:tableTLB.port2
-DIN[13] <= tlb:tableTLB.port2
-DIN[14] <= tlb:tableTLB.port2
-DIN[15] <= tlb:tableTLB.port2
+DIN[0] <= TLB:tlb.port2
+DIN[1] <= TLB:tlb.port2
+DIN[2] <= TLB:tlb.port2
+DIN[3] <= TLB:tlb.port2
+DIN[4] <= TLB:tlb.port2
+DIN[5] <= TLB:tlb.port2
+DIN[6] <= TLB:tlb.port2
+DIN[7] <= TLB:tlb.port2
+DIN[8] <= TLB:tlb.port2
+DIN[9] <= TLB:tlb.port2
+DIN[10] <= TLB:tlb.port2
+DIN[11] <= TLB:tlb.port2
+DIN[12] <= TLB:tlb.port2
+DIN[13] <= TLB:tlb.port2
+DIN[14] <= TLB:tlb.port2
+DIN[15] <= TLB:tlb.port2
 
 
-|pratica2|ifetch:ifetch|romlpm:addrs
+|pratica2|instructionFetch:iF|romlpm:address
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -47,7 +47,7 @@ q[4] <= altsyncram:altsyncram_component.q_a
 q[5] <= altsyncram:altsyncram_component.q_a
 
 
-|pratica2|ifetch:ifetch|romlpm:addrs|altsyncram:altsyncram_component
+|pratica2|instructionFetch:iF|romlpm:address|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -90,7 +90,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|pratica2|ifetch:ifetch|romlpm:addrs|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated
+|pratica2|instructionFetch:iF|romlpm:address|altsyncram:altsyncram_component|altsyncram_21a1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -141,7 +141,7 @@ q_a[4] <= ram_block1a4.PORTADATAOUT
 q_a[5] <= ram_block1a5.PORTADATAOUT
 
 
-|pratica2|ifetch:ifetch|tlb:tableTLB
+|pratica2|instructionFetch:iF|TLB:tlb
 addr[0] => Equal0.IN5
 addr[1] => Equal0.IN4
 addr[2] => Equal0.IN3
@@ -436,7 +436,7 @@ wren_a => ram_block1a14.PORTAWE
 wren_a => ram_block1a15.PORTAWE
 
 
-|pratica2|proc:proc
+|pratica2|proc:processor
 DIN[0] => DIN[0].IN1
 DIN[1] => DIN[1].IN1
 DIN[2] => DIN[2].IN1
@@ -453,22 +453,22 @@ DIN[12] => DIN[12].IN2
 DIN[13] => DIN[13].IN2
 DIN[14] => DIN[14].IN2
 DIN[15] => DIN[15].IN2
-mem[0] => ~NO_FANOUT~
-mem[1] => ~NO_FANOUT~
-mem[2] => ~NO_FANOUT~
-mem[3] => ~NO_FANOUT~
-mem[4] => ~NO_FANOUT~
-mem[5] => ~NO_FANOUT~
-mem[6] => ~NO_FANOUT~
-mem[7] => ~NO_FANOUT~
-mem[8] => ~NO_FANOUT~
-mem[9] => ~NO_FANOUT~
-mem[10] => ~NO_FANOUT~
-mem[11] => ~NO_FANOUT~
-mem[12] => ~NO_FANOUT~
-mem[13] => ~NO_FANOUT~
-mem[14] => ~NO_FANOUT~
-mem[15] => ~NO_FANOUT~
+mem[0] => mem[0].IN1
+mem[1] => mem[1].IN1
+mem[2] => mem[2].IN1
+mem[3] => mem[3].IN1
+mem[4] => mem[4].IN1
+mem[5] => mem[5].IN1
+mem[6] => mem[6].IN1
+mem[7] => mem[7].IN1
+mem[8] => mem[8].IN1
+mem[9] => mem[9].IN1
+mem[10] => mem[10].IN1
+mem[11] => mem[11].IN1
+mem[12] => mem[12].IN1
+mem[13] => mem[13].IN1
+mem[14] => mem[14].IN1
+mem[15] => mem[15].IN1
 Resetn => Resetn.IN14
 Clock => Clock.IN15
 Run => gOut.OUTPUTSELECT
@@ -481,6 +481,7 @@ Run => regIn.OUTPUTSELECT
 Run => regIn.OUTPUTSELECT
 Run => regIn.OUTPUTSELECT
 Run => Done.OUTPUTSELECT
+Run => memOut.OUTPUTSELECT
 Run => gIn.OUTPUTSELECT
 Run => regOut.OUTPUTSELECT
 Run => regOut.OUTPUTSELECT
@@ -558,7 +559,7 @@ doutM[15] <= regn:reg_Dout.port3
 wM <= regn:reg_W.port3
 
 
-|pratica2|proc:proc|dec3to8:decX
+|pratica2|proc:processor|dec3to8:decX
 W[0] => Decoder0.IN2
 W[1] => Decoder0.IN1
 W[2] => Decoder0.IN0
@@ -580,7 +581,7 @@ Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pratica2|proc:proc|dec3to8:decY
+|pratica2|proc:processor|dec3to8:decY
 W[0] => Decoder0.IN2
 W[1] => Decoder0.IN1
 W[2] => Decoder0.IN0
@@ -602,7 +603,7 @@ Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pratica2|proc:proc|upcount:tstep
+|pratica2|proc:processor|upcount:tstep
 Clear => Q.OUTPUTSELECT
 Clear => Q.OUTPUTSELECT
 Clock => Q[0]~reg0.CLK
@@ -611,7 +612,7 @@ Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pratica2|proc:proc|regn:reg_0
+|pratica2|proc:processor|regn:reg_0
 R[0] => Q.DATAB
 R[1] => Q.DATAB
 R[2] => Q.DATAB
@@ -694,7 +695,7 @@ set_0 => Q.OUTPUTSELECT
 set_0 => Q.OUTPUTSELECT
 
 
-|pratica2|proc:proc|regn:reg_1
+|pratica2|proc:processor|regn:reg_1
 R[0] => Q.DATAB
 R[1] => Q.DATAB
 R[2] => Q.DATAB
@@ -777,7 +778,7 @@ set_0 => Q.OUTPUTSELECT
 set_0 => Q.OUTPUTSELECT
 
 
-|pratica2|proc:proc|regn:reg_2
+|pratica2|proc:processor|regn:reg_2
 R[0] => Q.DATAB
 R[1] => Q.DATAB
 R[2] => Q.DATAB
@@ -860,7 +861,7 @@ set_0 => Q.OUTPUTSELECT
 set_0 => Q.OUTPUTSELECT
 
 
-|pratica2|proc:proc|regn:reg_3
+|pratica2|proc:processor|regn:reg_3
 R[0] => Q.DATAB
 R[1] => Q.DATAB
 R[2] => Q.DATAB
@@ -943,7 +944,7 @@ set_0 => Q.OUTPUTSELECT
 set_0 => Q.OUTPUTSELECT
 
 
-|pratica2|proc:proc|regn:reg_4
+|pratica2|proc:processor|regn:reg_4
 R[0] => Q.DATAB
 R[1] => Q.DATAB
 R[2] => Q.DATAB
@@ -1026,7 +1027,7 @@ set_0 => Q.OUTPUTSELECT
 set_0 => Q.OUTPUTSELECT
 
 
-|pratica2|proc:proc|regn:reg_5
+|pratica2|proc:processor|regn:reg_5
 R[0] => Q.DATAB
 R[1] => Q.DATAB
 R[2] => Q.DATAB
@@ -1109,7 +1110,7 @@ set_0 => Q.OUTPUTSELECT
 set_0 => Q.OUTPUTSELECT
 
 
-|pratica2|proc:proc|regn:reg_6
+|pratica2|proc:processor|regn:reg_6
 R[0] => Q.DATAB
 R[1] => Q.DATAB
 R[2] => Q.DATAB
@@ -1192,7 +1193,7 @@ set_0 => Q.OUTPUTSELECT
 set_0 => Q.OUTPUTSELECT
 
 
-|pratica2|proc:proc|counterlpm:count
+|pratica2|proc:processor|counterlpm:reg_7
 clk_en => clk_en.IN1
 clock => clock.IN1
 cnt_en => cnt_en.IN1
@@ -1212,7 +1213,7 @@ q[4] <= lpm_counter:LPM_COUNTER_component.q
 q[5] <= lpm_counter:LPM_COUNTER_component.q
 
 
-|pratica2|proc:proc|counterlpm:count|lpm_counter:LPM_COUNTER_component
+|pratica2|proc:processor|counterlpm:reg_7|lpm_counter:LPM_COUNTER_component
 clock => cntr_akk:auto_generated.clock
 clk_en => cntr_akk:auto_generated.clk_en
 cnt_en => cntr_akk:auto_generated.cnt_en
@@ -1257,7 +1258,7 @@ eq[14] <= <GND>
 eq[15] <= <GND>
 
 
-|pratica2|proc:proc|counterlpm:count|lpm_counter:LPM_COUNTER_component|cntr_akk:auto_generated
+|pratica2|proc:processor|counterlpm:reg_7|lpm_counter:LPM_COUNTER_component|cntr_akk:auto_generated
 clk_en => counter_reg_bit[5].IN0
 clock => counter_reg_bit[5].CLK
 clock => counter_reg_bit[4].CLK
@@ -1285,7 +1286,7 @@ sload => _.IN1
 sload => counter_reg_bit[5].IN1
 
 
-|pratica2|proc:proc|alu:alu
+|pratica2|proc:processor|ULA:ula
 sinal[0] => Mux0.IN10
 sinal[0] => Mux1.IN10
 sinal[0] => Mux2.IN10
@@ -1547,7 +1548,7 @@ G[14] <= G[14]$latch.DB_MAX_OUTPUT_PORT_TYPE
 G[15] <= G[15]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pratica2|proc:proc|regn:reg_A
+|pratica2|proc:processor|regn:reg_A
 R[0] => Q.DATAB
 R[1] => Q.DATAB
 R[2] => Q.DATAB
@@ -1630,7 +1631,7 @@ set_0 => Q.OUTPUTSELECT
 set_0 => Q.OUTPUTSELECT
 
 
-|pratica2|proc:proc|regn:reg_G
+|pratica2|proc:processor|regn:reg_G
 R[0] => Q.DATAB
 R[1] => Q.DATAB
 R[2] => Q.DATAB
@@ -1713,7 +1714,7 @@ set_0 => Q.OUTPUTSELECT
 set_0 => Q.OUTPUTSELECT
 
 
-|pratica2|proc:proc|regn:reg_IR
+|pratica2|proc:processor|regn:reg_IR
 R[0] => Q.DATAB
 R[1] => Q.DATAB
 R[2] => Q.DATAB
@@ -1766,90 +1767,7 @@ set_0 => Q.OUTPUTSELECT
 set_0 => Q.OUTPUTSELECT
 
 
-|pratica2|proc:proc|regn:reg_Addr
-R[0] => Q.DATAB
-R[1] => Q.DATAB
-R[2] => Q.DATAB
-R[3] => Q.DATAB
-R[4] => Q.DATAB
-R[5] => Q.DATAB
-R[6] => Q.DATAB
-R[7] => Q.DATAB
-R[8] => Q.DATAB
-R[9] => Q.DATAB
-R[10] => Q.DATAB
-R[11] => Q.DATAB
-R[12] => Q.DATAB
-R[13] => Q.DATAB
-R[14] => Q.DATAB
-R[15] => Q.DATAB
-Rin => Q.OUTPUTSELECT
-Rin => Q.OUTPUTSELECT
-Rin => Q.OUTPUTSELECT
-Rin => Q.OUTPUTSELECT
-Rin => Q.OUTPUTSELECT
-Rin => Q.OUTPUTSELECT
-Rin => Q.OUTPUTSELECT
-Rin => Q.OUTPUTSELECT
-Rin => Q.OUTPUTSELECT
-Rin => Q.OUTPUTSELECT
-Rin => Q.OUTPUTSELECT
-Rin => Q.OUTPUTSELECT
-Rin => Q.OUTPUTSELECT
-Rin => Q.OUTPUTSELECT
-Rin => Q.OUTPUTSELECT
-Rin => Q.OUTPUTSELECT
-Clock => Q[0]~reg0.CLK
-Clock => Q[1]~reg0.CLK
-Clock => Q[2]~reg0.CLK
-Clock => Q[3]~reg0.CLK
-Clock => Q[4]~reg0.CLK
-Clock => Q[5]~reg0.CLK
-Clock => Q[6]~reg0.CLK
-Clock => Q[7]~reg0.CLK
-Clock => Q[8]~reg0.CLK
-Clock => Q[9]~reg0.CLK
-Clock => Q[10]~reg0.CLK
-Clock => Q[11]~reg0.CLK
-Clock => Q[12]~reg0.CLK
-Clock => Q[13]~reg0.CLK
-Clock => Q[14]~reg0.CLK
-Clock => Q[15]~reg0.CLK
-Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-set_0 => Q.OUTPUTSELECT
-set_0 => Q.OUTPUTSELECT
-set_0 => Q.OUTPUTSELECT
-set_0 => Q.OUTPUTSELECT
-set_0 => Q.OUTPUTSELECT
-set_0 => Q.OUTPUTSELECT
-set_0 => Q.OUTPUTSELECT
-set_0 => Q.OUTPUTSELECT
-set_0 => Q.OUTPUTSELECT
-set_0 => Q.OUTPUTSELECT
-set_0 => Q.OUTPUTSELECT
-set_0 => Q.OUTPUTSELECT
-set_0 => Q.OUTPUTSELECT
-set_0 => Q.OUTPUTSELECT
-set_0 => Q.OUTPUTSELECT
-set_0 => Q.OUTPUTSELECT
-
-
-|pratica2|proc:proc|regn:reg_Dout
+|pratica2|proc:processor|regn:reg_Addr
 R[0] => Q.DATAB
 R[1] => Q.DATAB
 R[2] => Q.DATAB
@@ -1932,7 +1850,90 @@ set_0 => Q.OUTPUTSELECT
 set_0 => Q.OUTPUTSELECT
 
 
-|pratica2|proc:proc|regn:reg_W
+|pratica2|proc:processor|regn:reg_Dout
+R[0] => Q.DATAB
+R[1] => Q.DATAB
+R[2] => Q.DATAB
+R[3] => Q.DATAB
+R[4] => Q.DATAB
+R[5] => Q.DATAB
+R[6] => Q.DATAB
+R[7] => Q.DATAB
+R[8] => Q.DATAB
+R[9] => Q.DATAB
+R[10] => Q.DATAB
+R[11] => Q.DATAB
+R[12] => Q.DATAB
+R[13] => Q.DATAB
+R[14] => Q.DATAB
+R[15] => Q.DATAB
+Rin => Q.OUTPUTSELECT
+Rin => Q.OUTPUTSELECT
+Rin => Q.OUTPUTSELECT
+Rin => Q.OUTPUTSELECT
+Rin => Q.OUTPUTSELECT
+Rin => Q.OUTPUTSELECT
+Rin => Q.OUTPUTSELECT
+Rin => Q.OUTPUTSELECT
+Rin => Q.OUTPUTSELECT
+Rin => Q.OUTPUTSELECT
+Rin => Q.OUTPUTSELECT
+Rin => Q.OUTPUTSELECT
+Rin => Q.OUTPUTSELECT
+Rin => Q.OUTPUTSELECT
+Rin => Q.OUTPUTSELECT
+Rin => Q.OUTPUTSELECT
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+Clock => Q[5]~reg0.CLK
+Clock => Q[6]~reg0.CLK
+Clock => Q[7]~reg0.CLK
+Clock => Q[8]~reg0.CLK
+Clock => Q[9]~reg0.CLK
+Clock => Q[10]~reg0.CLK
+Clock => Q[11]~reg0.CLK
+Clock => Q[12]~reg0.CLK
+Clock => Q[13]~reg0.CLK
+Clock => Q[14]~reg0.CLK
+Clock => Q[15]~reg0.CLK
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+set_0 => Q.OUTPUTSELECT
+set_0 => Q.OUTPUTSELECT
+set_0 => Q.OUTPUTSELECT
+set_0 => Q.OUTPUTSELECT
+set_0 => Q.OUTPUTSELECT
+set_0 => Q.OUTPUTSELECT
+set_0 => Q.OUTPUTSELECT
+set_0 => Q.OUTPUTSELECT
+set_0 => Q.OUTPUTSELECT
+set_0 => Q.OUTPUTSELECT
+set_0 => Q.OUTPUTSELECT
+set_0 => Q.OUTPUTSELECT
+set_0 => Q.OUTPUTSELECT
+set_0 => Q.OUTPUTSELECT
+set_0 => Q.OUTPUTSELECT
+set_0 => Q.OUTPUTSELECT
+
+
+|pratica2|proc:processor|regn:reg_W
 R[0] => Q.DATAB
 Rin => Q.OUTPUTSELECT
 Clock => Q[0]~reg0.CLK
@@ -1940,257 +1941,294 @@ Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 set_0 => Q.OUTPUTSELECT
 
 
-|pratica2|proc:proc|multiplex:multiplex
-din[0] => Selector1.IN12
-din[1] => Selector0.IN12
-din[2] => Selector2.IN12
-din[3] => Selector3.IN12
-din[4] => Selector4.IN12
-din[5] => Selector5.IN12
-din[6] => Selector6.IN13
-din[7] => Selector7.IN13
-din[8] => Selector8.IN13
-din[9] => Selector9.IN13
-din[10] => Selector10.IN13
-din[11] => Selector11.IN13
-din[12] => Selector12.IN13
-din[13] => Selector13.IN13
-din[14] => Selector14.IN13
-din[15] => Selector15.IN13
-r0[0] => Selector1.IN13
-r0[1] => Selector0.IN13
-r0[2] => Selector2.IN13
-r0[3] => Selector3.IN13
-r0[4] => Selector4.IN13
-r0[5] => Selector5.IN13
-r0[6] => Selector6.IN14
-r0[7] => Selector7.IN14
-r0[8] => Selector8.IN14
-r0[9] => Selector9.IN14
-r0[10] => Selector10.IN14
-r0[11] => Selector11.IN14
-r0[12] => Selector12.IN14
-r0[13] => Selector13.IN14
-r0[14] => Selector14.IN14
-r0[15] => Selector15.IN14
-r1[0] => Selector1.IN14
-r1[1] => Selector0.IN14
-r1[2] => Selector2.IN14
-r1[3] => Selector3.IN14
-r1[4] => Selector4.IN14
-r1[5] => Selector5.IN14
-r1[6] => Selector6.IN15
-r1[7] => Selector7.IN15
-r1[8] => Selector8.IN15
-r1[9] => Selector9.IN15
-r1[10] => Selector10.IN15
-r1[11] => Selector11.IN15
-r1[12] => Selector12.IN15
-r1[13] => Selector13.IN15
-r1[14] => Selector14.IN15
-r1[15] => Selector15.IN15
-r2[0] => Selector1.IN15
-r2[1] => Selector0.IN15
-r2[2] => Selector2.IN15
-r2[3] => Selector3.IN15
-r2[4] => Selector4.IN15
-r2[5] => Selector5.IN15
-r2[6] => Selector6.IN16
-r2[7] => Selector7.IN16
-r2[8] => Selector8.IN16
-r2[9] => Selector9.IN16
-r2[10] => Selector10.IN16
-r2[11] => Selector11.IN16
-r2[12] => Selector12.IN16
-r2[13] => Selector13.IN16
-r2[14] => Selector14.IN16
-r2[15] => Selector15.IN16
-r3[0] => Selector1.IN16
-r3[1] => Selector0.IN16
-r3[2] => Selector2.IN16
-r3[3] => Selector3.IN16
-r3[4] => Selector4.IN16
-r3[5] => Selector5.IN16
-r3[6] => Selector6.IN17
-r3[7] => Selector7.IN17
-r3[8] => Selector8.IN17
-r3[9] => Selector9.IN17
-r3[10] => Selector10.IN17
-r3[11] => Selector11.IN17
-r3[12] => Selector12.IN17
-r3[13] => Selector13.IN17
-r3[14] => Selector14.IN17
-r3[15] => Selector15.IN17
-r4[0] => Selector1.IN17
-r4[1] => Selector0.IN17
-r4[2] => Selector2.IN17
-r4[3] => Selector3.IN17
-r4[4] => Selector4.IN17
-r4[5] => Selector5.IN17
-r4[6] => Selector6.IN18
-r4[7] => Selector7.IN18
-r4[8] => Selector8.IN18
-r4[9] => Selector9.IN18
-r4[10] => Selector10.IN18
-r4[11] => Selector11.IN18
-r4[12] => Selector12.IN18
-r4[13] => Selector13.IN18
-r4[14] => Selector14.IN18
-r4[15] => Selector15.IN18
-r5[0] => Selector1.IN18
-r5[1] => Selector0.IN18
-r5[2] => Selector2.IN18
-r5[3] => Selector3.IN18
-r5[4] => Selector4.IN18
-r5[5] => Selector5.IN18
-r5[6] => Selector6.IN19
-r5[7] => Selector7.IN19
-r5[8] => Selector8.IN19
-r5[9] => Selector9.IN19
-r5[10] => Selector10.IN19
-r5[11] => Selector11.IN19
-r5[12] => Selector12.IN19
-r5[13] => Selector13.IN19
-r5[14] => Selector14.IN19
-r5[15] => Selector15.IN19
-r6[0] => Selector1.IN19
-r6[1] => Selector0.IN19
-r6[2] => Selector2.IN19
-r6[3] => Selector3.IN19
-r6[4] => Selector4.IN19
-r6[5] => Selector5.IN19
-r6[6] => Selector6.IN20
-r6[7] => Selector7.IN20
-r6[8] => Selector8.IN20
-r6[9] => Selector9.IN20
-r6[10] => Selector10.IN20
-r6[11] => Selector11.IN20
-r6[12] => Selector12.IN20
-r6[13] => Selector13.IN20
-r6[14] => Selector14.IN20
-r6[15] => Selector15.IN20
-pc[0] => Selector1.IN21
-pc[1] => Selector0.IN21
-pc[2] => Selector2.IN21
-pc[3] => Selector3.IN21
-pc[4] => Selector4.IN21
-pc[5] => Selector5.IN21
-g[0] => Selector1.IN20
-g[1] => Selector0.IN20
-g[2] => Selector2.IN20
-g[3] => Selector3.IN20
-g[4] => Selector4.IN20
-g[5] => Selector5.IN20
-g[6] => Selector6.IN21
-g[7] => Selector7.IN21
-g[8] => Selector8.IN21
-g[9] => Selector9.IN21
-g[10] => Selector10.IN21
-g[11] => Selector11.IN21
-g[12] => Selector12.IN21
-g[13] => Selector13.IN21
-g[14] => Selector14.IN21
-g[15] => Selector15.IN21
-control[9] => Equal0.IN19
-control[9] => Equal1.IN19
-control[9] => Equal2.IN19
-control[9] => Equal3.IN19
-control[9] => Equal4.IN19
-control[9] => Equal5.IN19
-control[9] => Equal6.IN19
-control[9] => Equal7.IN19
-control[9] => Equal8.IN19
-control[9] => Equal9.IN19
-control[8] => Equal0.IN18
-control[8] => Equal1.IN18
-control[8] => Equal2.IN18
-control[8] => Equal3.IN18
-control[8] => Equal4.IN18
-control[8] => Equal5.IN18
-control[8] => Equal6.IN18
-control[8] => Equal7.IN18
-control[8] => Equal8.IN18
-control[8] => Equal9.IN18
-control[7] => Equal0.IN17
-control[7] => Equal1.IN17
-control[7] => Equal2.IN17
-control[7] => Equal3.IN17
-control[7] => Equal4.IN17
-control[7] => Equal5.IN17
-control[7] => Equal6.IN17
-control[7] => Equal7.IN17
-control[7] => Equal8.IN17
-control[7] => Equal9.IN17
-control[6] => Equal0.IN16
-control[6] => Equal1.IN16
-control[6] => Equal2.IN16
-control[6] => Equal3.IN16
-control[6] => Equal4.IN16
-control[6] => Equal5.IN16
-control[6] => Equal6.IN16
-control[6] => Equal7.IN16
-control[6] => Equal8.IN16
-control[6] => Equal9.IN16
-control[5] => Equal0.IN15
-control[5] => Equal1.IN15
-control[5] => Equal2.IN15
-control[5] => Equal3.IN15
-control[5] => Equal4.IN15
-control[5] => Equal5.IN15
-control[5] => Equal6.IN15
-control[5] => Equal7.IN15
-control[5] => Equal8.IN15
-control[5] => Equal9.IN15
-control[4] => Equal0.IN14
-control[4] => Equal1.IN14
-control[4] => Equal2.IN14
-control[4] => Equal3.IN14
-control[4] => Equal4.IN14
-control[4] => Equal5.IN14
-control[4] => Equal6.IN14
-control[4] => Equal7.IN14
-control[4] => Equal8.IN14
-control[4] => Equal9.IN14
-control[3] => Equal0.IN13
-control[3] => Equal1.IN13
-control[3] => Equal2.IN13
-control[3] => Equal3.IN13
-control[3] => Equal4.IN13
-control[3] => Equal5.IN13
-control[3] => Equal6.IN13
-control[3] => Equal7.IN13
-control[3] => Equal8.IN13
-control[3] => Equal9.IN13
-control[2] => Equal0.IN12
-control[2] => Equal1.IN12
-control[2] => Equal2.IN12
-control[2] => Equal3.IN12
-control[2] => Equal4.IN12
-control[2] => Equal5.IN12
-control[2] => Equal6.IN12
-control[2] => Equal7.IN12
-control[2] => Equal8.IN12
-control[2] => Equal9.IN12
-control[1] => Equal0.IN11
-control[1] => Equal1.IN11
-control[1] => Equal2.IN11
-control[1] => Equal3.IN11
-control[1] => Equal4.IN11
-control[1] => Equal5.IN11
-control[1] => Equal6.IN11
-control[1] => Equal7.IN11
-control[1] => Equal8.IN11
-control[1] => Equal9.IN11
-control[0] => Equal0.IN10
-control[0] => Equal1.IN10
-control[0] => Equal2.IN10
-control[0] => Equal3.IN10
-control[0] => Equal4.IN10
-control[0] => Equal5.IN10
-control[0] => Equal6.IN10
-control[0] => Equal7.IN10
-control[0] => Equal8.IN10
-control[0] => Equal9.IN10
+|pratica2|proc:processor|MUX:mux
+din[0] => Selector1.IN13
+din[1] => Selector0.IN13
+din[2] => Selector2.IN13
+din[3] => Selector3.IN13
+din[4] => Selector4.IN13
+din[5] => Selector5.IN13
+din[6] => Selector6.IN14
+din[7] => Selector7.IN14
+din[8] => Selector8.IN14
+din[9] => Selector9.IN14
+din[10] => Selector10.IN14
+din[11] => Selector11.IN14
+din[12] => Selector12.IN14
+din[13] => Selector13.IN14
+din[14] => Selector14.IN14
+din[15] => Selector15.IN14
+r0[0] => Selector1.IN14
+r0[1] => Selector0.IN14
+r0[2] => Selector2.IN14
+r0[3] => Selector3.IN14
+r0[4] => Selector4.IN14
+r0[5] => Selector5.IN14
+r0[6] => Selector6.IN15
+r0[7] => Selector7.IN15
+r0[8] => Selector8.IN15
+r0[9] => Selector9.IN15
+r0[10] => Selector10.IN15
+r0[11] => Selector11.IN15
+r0[12] => Selector12.IN15
+r0[13] => Selector13.IN15
+r0[14] => Selector14.IN15
+r0[15] => Selector15.IN15
+r1[0] => Selector1.IN15
+r1[1] => Selector0.IN15
+r1[2] => Selector2.IN15
+r1[3] => Selector3.IN15
+r1[4] => Selector4.IN15
+r1[5] => Selector5.IN15
+r1[6] => Selector6.IN16
+r1[7] => Selector7.IN16
+r1[8] => Selector8.IN16
+r1[9] => Selector9.IN16
+r1[10] => Selector10.IN16
+r1[11] => Selector11.IN16
+r1[12] => Selector12.IN16
+r1[13] => Selector13.IN16
+r1[14] => Selector14.IN16
+r1[15] => Selector15.IN16
+r2[0] => Selector1.IN16
+r2[1] => Selector0.IN16
+r2[2] => Selector2.IN16
+r2[3] => Selector3.IN16
+r2[4] => Selector4.IN16
+r2[5] => Selector5.IN16
+r2[6] => Selector6.IN17
+r2[7] => Selector7.IN17
+r2[8] => Selector8.IN17
+r2[9] => Selector9.IN17
+r2[10] => Selector10.IN17
+r2[11] => Selector11.IN17
+r2[12] => Selector12.IN17
+r2[13] => Selector13.IN17
+r2[14] => Selector14.IN17
+r2[15] => Selector15.IN17
+r3[0] => Selector1.IN17
+r3[1] => Selector0.IN17
+r3[2] => Selector2.IN17
+r3[3] => Selector3.IN17
+r3[4] => Selector4.IN17
+r3[5] => Selector5.IN17
+r3[6] => Selector6.IN18
+r3[7] => Selector7.IN18
+r3[8] => Selector8.IN18
+r3[9] => Selector9.IN18
+r3[10] => Selector10.IN18
+r3[11] => Selector11.IN18
+r3[12] => Selector12.IN18
+r3[13] => Selector13.IN18
+r3[14] => Selector14.IN18
+r3[15] => Selector15.IN18
+r4[0] => Selector1.IN18
+r4[1] => Selector0.IN18
+r4[2] => Selector2.IN18
+r4[3] => Selector3.IN18
+r4[4] => Selector4.IN18
+r4[5] => Selector5.IN18
+r4[6] => Selector6.IN19
+r4[7] => Selector7.IN19
+r4[8] => Selector8.IN19
+r4[9] => Selector9.IN19
+r4[10] => Selector10.IN19
+r4[11] => Selector11.IN19
+r4[12] => Selector12.IN19
+r4[13] => Selector13.IN19
+r4[14] => Selector14.IN19
+r4[15] => Selector15.IN19
+r5[0] => Selector1.IN19
+r5[1] => Selector0.IN19
+r5[2] => Selector2.IN19
+r5[3] => Selector3.IN19
+r5[4] => Selector4.IN19
+r5[5] => Selector5.IN19
+r5[6] => Selector6.IN20
+r5[7] => Selector7.IN20
+r5[8] => Selector8.IN20
+r5[9] => Selector9.IN20
+r5[10] => Selector10.IN20
+r5[11] => Selector11.IN20
+r5[12] => Selector12.IN20
+r5[13] => Selector13.IN20
+r5[14] => Selector14.IN20
+r5[15] => Selector15.IN20
+r6[0] => Selector1.IN20
+r6[1] => Selector0.IN20
+r6[2] => Selector2.IN20
+r6[3] => Selector3.IN20
+r6[4] => Selector4.IN20
+r6[5] => Selector5.IN20
+r6[6] => Selector6.IN21
+r6[7] => Selector7.IN21
+r6[8] => Selector8.IN21
+r6[9] => Selector9.IN21
+r6[10] => Selector10.IN21
+r6[11] => Selector11.IN21
+r6[12] => Selector12.IN21
+r6[13] => Selector13.IN21
+r6[14] => Selector14.IN21
+r6[15] => Selector15.IN21
+pc[0] => Selector1.IN23
+pc[1] => Selector0.IN23
+pc[2] => Selector2.IN23
+pc[3] => Selector3.IN23
+pc[4] => Selector4.IN23
+pc[5] => Selector5.IN23
+g[0] => Selector1.IN21
+g[1] => Selector0.IN21
+g[2] => Selector2.IN21
+g[3] => Selector3.IN21
+g[4] => Selector4.IN21
+g[5] => Selector5.IN21
+g[6] => Selector6.IN22
+g[7] => Selector7.IN22
+g[8] => Selector8.IN22
+g[9] => Selector9.IN22
+g[10] => Selector10.IN22
+g[11] => Selector11.IN22
+g[12] => Selector12.IN22
+g[13] => Selector13.IN22
+g[14] => Selector14.IN22
+g[15] => Selector15.IN22
+mem[0] => Selector1.IN22
+mem[1] => Selector0.IN22
+mem[2] => Selector2.IN22
+mem[3] => Selector3.IN22
+mem[4] => Selector4.IN22
+mem[5] => Selector5.IN22
+mem[6] => Selector6.IN23
+mem[7] => Selector7.IN23
+mem[8] => Selector8.IN23
+mem[9] => Selector9.IN23
+mem[10] => Selector10.IN23
+mem[11] => Selector11.IN23
+mem[12] => Selector12.IN23
+mem[13] => Selector13.IN23
+mem[14] => Selector14.IN23
+mem[15] => Selector15.IN23
+control[10] => Equal0.IN21
+control[10] => Equal1.IN21
+control[10] => Equal2.IN21
+control[10] => Equal3.IN21
+control[10] => Equal4.IN21
+control[10] => Equal5.IN21
+control[10] => Equal6.IN21
+control[10] => Equal7.IN21
+control[10] => Equal8.IN21
+control[10] => Equal9.IN21
+control[10] => Equal10.IN21
+control[9] => Equal0.IN20
+control[9] => Equal1.IN20
+control[9] => Equal2.IN20
+control[9] => Equal3.IN20
+control[9] => Equal4.IN20
+control[9] => Equal5.IN20
+control[9] => Equal6.IN20
+control[9] => Equal7.IN20
+control[9] => Equal8.IN20
+control[9] => Equal9.IN20
+control[9] => Equal10.IN20
+control[8] => Equal0.IN19
+control[8] => Equal1.IN19
+control[8] => Equal2.IN19
+control[8] => Equal3.IN19
+control[8] => Equal4.IN19
+control[8] => Equal5.IN19
+control[8] => Equal6.IN19
+control[8] => Equal7.IN19
+control[8] => Equal8.IN19
+control[8] => Equal9.IN19
+control[8] => Equal10.IN19
+control[7] => Equal0.IN18
+control[7] => Equal1.IN18
+control[7] => Equal2.IN18
+control[7] => Equal3.IN18
+control[7] => Equal4.IN18
+control[7] => Equal5.IN18
+control[7] => Equal6.IN18
+control[7] => Equal7.IN18
+control[7] => Equal8.IN18
+control[7] => Equal9.IN18
+control[7] => Equal10.IN18
+control[6] => Equal0.IN17
+control[6] => Equal1.IN17
+control[6] => Equal2.IN17
+control[6] => Equal3.IN17
+control[6] => Equal4.IN17
+control[6] => Equal5.IN17
+control[6] => Equal6.IN17
+control[6] => Equal7.IN17
+control[6] => Equal8.IN17
+control[6] => Equal9.IN17
+control[6] => Equal10.IN17
+control[5] => Equal0.IN16
+control[5] => Equal1.IN16
+control[5] => Equal2.IN16
+control[5] => Equal3.IN16
+control[5] => Equal4.IN16
+control[5] => Equal5.IN16
+control[5] => Equal6.IN16
+control[5] => Equal7.IN16
+control[5] => Equal8.IN16
+control[5] => Equal9.IN16
+control[5] => Equal10.IN16
+control[4] => Equal0.IN15
+control[4] => Equal1.IN15
+control[4] => Equal2.IN15
+control[4] => Equal3.IN15
+control[4] => Equal4.IN15
+control[4] => Equal5.IN15
+control[4] => Equal6.IN15
+control[4] => Equal7.IN15
+control[4] => Equal8.IN15
+control[4] => Equal9.IN15
+control[4] => Equal10.IN15
+control[3] => Equal0.IN14
+control[3] => Equal1.IN14
+control[3] => Equal2.IN14
+control[3] => Equal3.IN14
+control[3] => Equal4.IN14
+control[3] => Equal5.IN14
+control[3] => Equal6.IN14
+control[3] => Equal7.IN14
+control[3] => Equal8.IN14
+control[3] => Equal9.IN14
+control[3] => Equal10.IN14
+control[2] => Equal0.IN13
+control[2] => Equal1.IN13
+control[2] => Equal2.IN13
+control[2] => Equal3.IN13
+control[2] => Equal4.IN13
+control[2] => Equal5.IN13
+control[2] => Equal6.IN13
+control[2] => Equal7.IN13
+control[2] => Equal8.IN13
+control[2] => Equal9.IN13
+control[2] => Equal10.IN13
+control[1] => Equal0.IN12
+control[1] => Equal1.IN12
+control[1] => Equal2.IN12
+control[1] => Equal3.IN12
+control[1] => Equal4.IN12
+control[1] => Equal5.IN12
+control[1] => Equal6.IN12
+control[1] => Equal7.IN12
+control[1] => Equal8.IN12
+control[1] => Equal9.IN12
+control[1] => Equal10.IN12
+control[0] => Equal0.IN11
+control[0] => Equal1.IN11
+control[0] => Equal2.IN11
+control[0] => Equal3.IN11
+control[0] => Equal4.IN11
+control[0] => Equal5.IN11
+control[0] => Equal6.IN11
+control[0] => Equal7.IN11
+control[0] => Equal8.IN11
+control[0] => Equal9.IN11
+control[0] => Equal10.IN11
 out[0] <= out[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= out[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= out[2]$latch.DB_MAX_OUTPUT_PORT_TYPE

@@ -14,9 +14,9 @@ module pratica2 (MClock, PClock, Resetn, Run);
 	
 	assign addrM = addr[4:0];
 	
-	ifetch ifetch (addrCount, MClock, DIN);
+	instructionFetch iF(addrCount, MClock, DIN);
 	ramlpm memory (addrM, MClock, dout, w, memOut);
-	proc proc (DIN, memOut, Resetn, PClock, Run, Done, BusWires, addrCount, addr, dout, w);
+	proc processor(DIN, memOut, Resetn, PClock, Run, Done, BusWires, addrCount, addr, dout, w);
 	
 	
 endmodule
