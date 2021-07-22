@@ -12,6 +12,9 @@ Check List
      * [Regn](#regn)
      * [upCount](#upcount)
      * [mux](#mux)
+   * [Testes](#código-teste)
+     * [Programa Principal](#programa-principal)  
+     * [Loop](#loop)  
 <!--te-->
 
 
@@ -19,7 +22,7 @@ Operações
 ============
 
 LD = carregar valor; <br />
-ST = armazenar valor; <br />
+SD = armazenar valor; <br />
 MVNZ = move se não for zero; <br />
 MV = conteúdo de registrador passa para o outro <br />
 MVI = move um imediato para um registrador <br />
@@ -35,7 +38,7 @@ SRL = move bits para direita <br />
 |      Operações      |      Num bits       |
 | ------------------- | ------------------- |
 |         MV          |        0000         |
-|         ST          |        0001         |
+|         SD          |        0001         |
 |        MVNZ         |        0010         |
 |        LD           |        0011         |
 |        MVI          |        0100         |
@@ -64,11 +67,11 @@ Módulos:<br />
 [ x ] regN  <br />
 [ x ] ULA  <br />
 [ x ] upcount  <br /> 
-[ ] TLB  <br />
-[ ] MIF LPM (caso teste)  <br />
-[ ] MIF Virtual  <br />
-[ ] Memória Virtual  <br />
-[ ] MODULO PRINCIPAL PRÁTICA 2  <br />
+[ x ] TLB  <br />
+[ x ] MIF LPM (caso teste)  <br />
+[ x ] MIF Virtual  <br />
+[ x ] Memória Virtual  <br />
+[ x ] MODULO PRINCIPAL PRÁTICA 2  <br />
 
 
 Modulos
@@ -83,6 +86,9 @@ Módulo para contar os estágios
 
 Código teste:
 ============
+
+Programa Principal
+-----
 16'b0100000000000000; // MVI R0, #2 <br />
 16'b0000000000000010; // #2 <br />
 16'b0100001000000000; // MVI R1, #3 <br />
@@ -122,3 +128,12 @@ Código teste:
 16'b0010000010000000; // MVNZ R0, R2 <br />
 16'b0101000001000000; // ADD R0, R1 <br />
 
+Loop
+-----
+16'b0100010000000000; <br />
+16'b0000000000000001; <br />
+16'b0100100000000000; <br />
+16'b0000000000001010; <br />
+16'b0000101111000000; <br />
+16'b0110100010000000; <br />
+16'b0010111101000000; <br />
