@@ -6,12 +6,25 @@ Check List
 
 <!--ts-->
    * [Operações](#operacoes)
+   
    * [Registradores](#registradores)
+   
    * [Estágios habilitados](#estagios-habilitados)
+   
    * [Modulos](#modulos)
-     * [Regn](#regn)
-     * [upCount](#upcount)
-     * [mux](#mux)
+     * [counterlpm](#counterlpm)
+     * [dec3to8](#dec3to8)
+     * [instructionFetch](#instructionFetch)
+     * [MUX](#mux)
+     * [pratica2](#pratica2)
+     * [proc](#proc)
+     * [ramlpm](#ramlpm)
+     * [regn](#regn)
+     * [romlpm](#romlpm)
+     * [TLB](#tlb)
+     * [ULA](#ula)
+     * [upcount](#upcount)
+     
    * [Testes](#código-teste)
      * [Programa Principal](#programa-principal)  
      * [Loop](#loop)  
