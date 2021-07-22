@@ -191,17 +191,13 @@ do {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pr
 # 
 #           File in use by: erick  Hostname: DESKTOP-J65UKP5  ProcessID: 9588
 # 
-#           Attempting to use alternate WLF file "./wlftw8wwai".
+#           Attempting to use alternate WLF file "./wlftbnse6s".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftw8wwai
+#           Using alternate file: ./wlftbnse6s
 # 
 # .main_pane.wave.interior.cs.body.pw.wf
 # 1
-add wave -position 0 -format Logic -height 17 -editable 2 Edit:/pratica2/MClock
-add wave -position 1 -format Logic -height 17 -editable 2 Edit:/pratica2/PClock
-add wave -position 2 -format Logic -height 17 -editable 2 Edit:/pratica2/Resetn
-add wave -position 3 -format Logic -height 17 -editable 2 Edit:/pratica2/Run
 run -all
 # ** Warning: (vsim-PLI-3412) Memory address read on line 129 of file "memoryMif.ver" is out of bounds specified for readmem command.  (Current address [64], address range [0:63])    : C:/altera/13.0sp1/modelsim_ase/win32aloem/../altera/verilog/src/altera_mf.v(45501)
 #    Time: 0 ps  Iteration: 0  Instance: /pratica2/memory/altsyncram_component

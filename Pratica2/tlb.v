@@ -4,10 +4,10 @@ module TLB(addr, Clock, out);
 	input Clock;
  	output reg [15:0] out;
 
-	reg [5:0] vP [0:40];
-	reg [15:0] fP [0:40]; 
+	reg [5:0] vP [0:38];
+	reg [15:0] fP [0:38]; 
 	
-	integer hit, index, i, control, numInstr;
+	integer index, i, control, numInstr;
 	
 	initial begin
 		
@@ -24,7 +24,7 @@ module TLB(addr, Clock, out);
 			vP[9] = 6'b001001;  vP[20]= 6'b010100;	 vP[31]= 6'b011111;  
 			vP[10]= 6'b001010;  vP[21]= 6'b010101;  vP[32]= 6'b100000;  
 			 
-			
+			/*
 			//paginas fisicas
 			fP[0] = 16'b0100000000000000; // MVI R0, #2
 			fP[1] = 16'b0000000000000010; // #2
@@ -64,8 +64,8 @@ module TLB(addr, Clock, out);
 			fP[35]= 16'b0110001011000000; // SUB R1, R3
 			fP[36]= 16'b0010000010000000; // MVNZ R0, R2
 			fP[37]= 16'b0101000001000000; // ADD R0, R1
+			*/
 			
-			/*
 			// Loop
 			fP[0] = 16'b0100010000000000;
 			fP[1] = 16'b0000000000000001;
@@ -74,14 +74,13 @@ module TLB(addr, Clock, out);
 			fP[4] = 16'b0000101111000000;
 			fP[5] = 16'b0110100010000000;
 			fP[6] = 16'b0010111101000000;	
-			*/
+			
 	end
 	
 	always @(*) begin
 		//inicializando variaveis
 		numInstr = 38;
 		out = 16'b0;
-		hit = 0; 
 		index = 0; 
 		i = 0; 
 		control = 0;
@@ -91,30 +90,11 @@ module TLB(addr, Clock, out);
 					if (addr == vP[i]) begin
 						control = 1;
 						index = i;
-						hit = 1;
 					end
-					else 
-						hit = 0;
 				end
 				i = i+1;
 		end
-/*		
-		for (i = 0; i < numInstr; i = i + 1) begin
-			if (control == 0) begin
-				if (addr == vP[i]) begin
-					control = 1;
-					index = i;
-					hit = 1;
-				end
-				else 
-					hit = 0;
-			end
-		end
-		*/
-		if (hit == 1) 
-			out = fP[index];
-		else 
-			out = 16'b0;		
+			out = fP[index];	
 	end
 
 endmodule
