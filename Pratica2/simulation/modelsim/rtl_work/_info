@@ -1,0 +1,265 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\erick\Downloads\aoc2-cefet-main (1)\Pratica2\code\simulation\modelsim
+valu
+I<L>_dFk3VUV9O1Vj@<ck^2
+Vg9_>XznmMFV]7e7coJG0R2
+Z1 dC:\Users\erick\Downloads\aoc2-cefet-main (1)\Pratica2\code\simulation\modelsim
+w1626894896
+8C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/alu.v
+FC:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/alu.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work {+incdir+C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code} -O0
+!i10b 1
+!s100 jkk[;C=G?i:AJWW6hdBdo0
+!s85 0
+!s108 1626916533.734000
+!s107 C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code|C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/alu.v|
+!s101 -O0
+vcounterlpm
+!i10b 1
+!s100 ?B6]U:Q0XM]2TDIY003gO1
+ITPO@?RUnXaKNccBNAHjhn3
+VRddMQMnGFliH^_3DOLEFE0
+R1
+Z5 w1626718532
+8C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/counterlpm.v
+FC:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/counterlpm.v
+L0 39
+R2
+r1
+!s85 0
+31
+!s108 1626916533.851000
+!s107 C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/counterlpm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code|C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/counterlpm.v|
+!s101 -O0
+R3
+R4
+vdec3to8
+IKb8iknhK]@7ljoHdFCd8j0
+V3MQ7SOW6nNK?k^ze_@^7O1
+R1
+w1626916496
+8C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/dec3to5.v
+FC:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/dec3to5.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 mE3Y=[eU@P_cV@S^PQN_z0
+!s85 0
+!s108 1626916533.523000
+!s107 C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/dec3to5.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code|C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/dec3to5.v|
+!s101 -O0
+vifetch
+IEWigHGUIhRhD1]J6zGD0W1
+VAGQ6O7iNEY3SM7CDXg2=B1
+R1
+w1626913418
+8C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/ifetch.v
+FC:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/ifetch.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 8LC^bE5=]D8oV_D3lVDUz2
+!s85 0
+!s108 1626916533.408000
+!s107 C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/ifetch.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code|C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/ifetch.v|
+!s101 -O0
+vmultiplex
+I;_^OSZznDJSSSVFTLfB<^2
+V3_o5LRdH9KYP]2Xh8;CJD1
+R1
+w1626916319
+8C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/multiplex.v
+FC:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/multiplex.v
+L0 3
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 j=LQgIlf:Gk7GocS9`Xbz0
+!s85 0
+!s108 1626916533.696000
+!s107 C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/multiplex.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code|C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/multiplex.v|
+!s101 -O0
+vpratica2
+ISGU0zWJKENI1@_?C5M03]2
+V8Ca;DczILa:PG[iW@Ya0n3
+R1
+w1626914330
+8C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/pratica2.v
+FC:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/pratica2.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 KM`gM8;la:PgjUYi4?m:U3
+!s85 0
+!s108 1626916533.485000
+!s107 C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/pratica2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code|C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/pratica2.v|
+!s101 -O0
+vproc
+IGz_b?CEHHXXc>4zlO=_[b1
+VCPHn[nGLmiYSQkN0V[E>L3
+R1
+w1626916481
+8C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/proc.v
+FC:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/proc.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 J7GYLV;lz8V7_lM9@5QZL1
+!s85 0
+!s108 1626916533.561000
+!s107 C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/proc.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code|C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/proc.v|
+!s101 -O0
+vramlpm
+Iz?[D_4bOi3EWJBH2H>4gg2
+V4c3l96noMjK]bFM7]IbUL0
+R1
+R5
+8C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/ramlpm.v
+FC:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/ramlpm.v
+L0 39
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 6Q;QCjL[NFaQT@ZDd:ZBK1
+!s85 0
+!s108 1626916533.773000
+!s107 C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/ramlpm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code|C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/ramlpm.v|
+!s101 -O0
+vregn
+IM@FbB]I1BjeMhclEGbJPa3
+V>4I0:3RkDA`dV9OI9564:0
+R1
+w1626906642
+8C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/regn.v
+FC:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/regn.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 8F43QJ0lm5NS4Jg2AE:i00
+!s85 0
+!s108 1626916533.658000
+!s107 C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/regn.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code|C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/regn.v|
+!s101 -O0
+vromlpm
+IEBY?Ji:38SMM_RNKhBHbT3
+V=7@TDo>IB??^`i4c3VfUN1
+R1
+R5
+8C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/romlpm.v
+FC:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/romlpm.v
+L0 39
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 n<h[<a7Jl:GD0=GEbL>Oo0
+!s85 0
+!s108 1626916533.811000
+!s107 C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/romlpm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code|C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/romlpm.v|
+!s101 -O0
+vtlb
+I9=lz3EA^PA3894]cV[=B]3
+V7Xh81]m62TZ:NP5MIR]X63
+R1
+R5
+8C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/tlb.v
+FC:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/tlb.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 ;0@:7oCgH>j0DPYP?Kz@K3
+!s85 0
+!s108 1626916533.447000
+!s107 C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/tlb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code|C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/tlb.v|
+!s101 -O0
+vupcount
+INWiWjJ:7hdlZL2S<8P:7>1
+V6F[W^nTWj`kicHA9eP>;d3
+R1
+Z6 w1626894455
+Z7 8C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/upcount.v
+Z8 FC:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/upcount.v
+L0 1
+R2
+r1
+31
+Z9 !s108 1626916533.612000
+Z10 !s107 C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/upcount.v|
+Z11 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code|C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/upcount.v|
+R3
+R4
+!i10b 1
+!s100 meVc5]So5n<b7;[T3LMII1
+!s85 0
+!s101 -O0
+vupcount_5
+I9HkHNo0k6McL8hVM0L35@1
+V]RRi2?b:g6_G^HS;CDk420
+R1
+R6
+R7
+R8
+L0 17
+R2
+r1
+31
+R9
+R10
+R11
+R3
+R4
+!i10b 1
+!s100 a^URlKZKF82]cI95nUlOO2
+!s85 0
+!s101 -O0
