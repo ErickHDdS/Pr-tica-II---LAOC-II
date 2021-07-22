@@ -12,6 +12,7 @@ Check List
      * [Regn](#regn)
      * [upCount](#upcount)
      * [mux](#mux)
+   * [Testes](#codigo-teste)
 <!--te-->
 
 
@@ -19,7 +20,7 @@ Operações
 ============
 
 LD = carregar valor; <br />
-ST = armazenar valor; <br />
+SD = armazenar valor; <br />
 MVNZ = move se não for zero; <br />
 MV = conteúdo de registrador passa para o outro <br />
 MVI = move um imediato para um registrador <br />
@@ -35,7 +36,7 @@ SRL = move bits para direita <br />
 |      Operações      |      Num bits       |
 | ------------------- | ------------------- |
 |         MV          |        0000         |
-|         ST          |        0001         |
+|         SD          |        0001         |
 |        MVNZ         |        0010         |
 |        LD           |        0011         |
 |        MVI          |        0100         |
@@ -64,11 +65,11 @@ Módulos:<br />
 [ x ] regN  <br />
 [ x ] ULA  <br />
 [ x ] upcount  <br /> 
-[ ] TLB  <br />
-[ ] MIF LPM (caso teste)  <br />
-[ ] MIF Virtual  <br />
-[ ] Memória Virtual  <br />
-[ ] MODULO PRINCIPAL PRÁTICA 2  <br />
+[ x ] TLB  <br />
+[ x ] MIF LPM (caso teste)  <br />
+[ x ] MIF Virtual  <br />
+[ x ] Memória Virtual  <br />
+[ x ] MODULO PRINCIPAL PRÁTICA 2  <br />
 
 
 Modulos
