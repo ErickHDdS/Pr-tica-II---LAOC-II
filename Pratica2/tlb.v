@@ -4,10 +4,10 @@ module TLB(addr, Clock, out);
 	input Clock;
  	output reg [15:0] out;
 
-	reg [5:0] vP [0:45];
-	reg [15:0] fP [0:45]; 
+	reg [5:0] vP [0:40];
+	reg [15:0] fP [0:40]; 
 	
-	integer hitAddr, hitIndex, i, break, addressSize;
+	integer hit, index, i, control, numInstr;
 	
 	initial begin
 		
@@ -17,12 +17,12 @@ module TLB(addr, Clock, out);
 			vP[2] = 6'b000010;  vP[13]= 6'b001101;  vP[24]= 6'b011000;  vP[35]= 6'b100011;
 			vP[3] = 6'b000011;  vP[14]= 6'b001110;  vP[25]= 6'b011001;  vP[36]= 6'b100100;
 			vP[4] = 6'b000100;  vP[15]= 6'b001111;  vP[26]= 6'b011010;  vP[37]= 6'b100101;
-			vP[5] = 6'b000101;  vP[16]= 6'b010000;  vP[27]= 6'b011011;  //vP[38]= 6'b100110;
-			vP[6] = 6'b000110;  vP[17]= 6'b010001;  vP[28]= 6'b011100;  //vP[39]= 6'b100111;
-			vP[7] = 6'b000111;  vP[18]= 6'b010010;  vP[29]= 6'b011101;  //vP[40]= 6'b101000;
-			vP[8] = 6'b001000;  vP[19]= 6'b010011;  vP[30]= 6'b011110;  //vP[41]= 6'b101001;
-			vP[9] = 6'b001001;  vP[20]= 6'b010100;	 vP[31]= 6'b011111;  //vP[42]= 6'b101010;
-			vP[10]= 6'b001010;  vP[21]= 6'b010101;  vP[32]= 6'b100000;  //vP[43]= 6'b101011;
+			vP[5] = 6'b000101;  vP[16]= 6'b010000;  vP[27]= 6'b011011;  
+			vP[6] = 6'b000110;  vP[17]= 6'b010001;  vP[28]= 6'b011100;  
+			vP[7] = 6'b000111;  vP[18]= 6'b010010;  vP[29]= 6'b011101;  
+			vP[8] = 6'b001000;  vP[19]= 6'b010011;  vP[30]= 6'b011110;  
+			vP[9] = 6'b001001;  vP[20]= 6'b010100;	 vP[31]= 6'b011111;  
+			vP[10]= 6'b001010;  vP[21]= 6'b010101;  vP[32]= 6'b100000;  
 			 
 			
 			//paginas fisicas
@@ -78,33 +78,43 @@ module TLB(addr, Clock, out);
 	end
 	
 	always @(*) begin
-		addressSize = 40;
+		//inicializando variaveis
+		numInstr = 38;
 		out = 16'b0;
-		hitAddr = 0; 
-		hitIndex = 0; 
+		hit = 0; 
+		index = 0; 
 		i = 0; 
-		break = 0;
+		control = 0;
 		
-		for (i=0;i<addressSize;i=i+1) begin
-			if (break == 0) begin
+		while(i < numInstr) begin
+			if (control == 0) begin
+					if (addr == vP[i]) begin
+						control = 1;
+						index = i;
+						hit = 1;
+					end
+					else 
+						hit = 0;
+				end
+				i = i+1;
+		end
+/*		
+		for (i = 0; i < numInstr; i = i + 1) begin
+			if (control == 0) begin
 				if (addr == vP[i]) begin
-					break = 1;
-					hitAddr = 1;
-					hitIndex = i;
+					control = 1;
+					index = i;
+					hit = 1;
 				end
-				else begin
-					hitAddr = 0;
-				end
+				else 
+					hit = 0;
 			end
 		end
-		
-		if (hitAddr == 1) begin
-			out = fP[hitIndex];
-		end
-		else begin
-			out = 16'b0;
-		end
-				
+		*/
+		if (hit == 1) 
+			out = fP[index];
+		else 
+			out = 16'b0;		
 	end
 
 endmodule

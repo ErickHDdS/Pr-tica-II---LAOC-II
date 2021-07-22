@@ -1,5 +1,5 @@
 Fitter report for pratica2
-Wed Jul 21 20:16:41 2021
+Thu Jul 22 12:26:30 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -57,7 +57,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Jul 21 20:16:41 2021           ;
+; Fitter Status                      ; Successful - Thu Jul 22 12:26:30 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; pratica2                                        ;
 ; Top-level Entity Name              ; pratica2                                        ;
@@ -199,7 +199,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/output_files/pratica2.pin.
+The pin-out file can be found in C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/output_files/pratica2.pin.
 
 
 +-------------------------------------------------------------------+
@@ -773,23 +773,23 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.03 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Info (144001): Generated suppressed messages file C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/output_files/pratica2.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/output_files/pratica2.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4923 megabytes
-    Info: Processing ended: Wed Jul 21 20:16:41 2021
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 4915 megabytes
+    Info: Processing ended: Thu Jul 22 12:26:30 2021
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/erick/Downloads/aoc2-cefet-main (1)/Pratica2/code/output_files/pratica2.fit.smsg.
+The suppressed messages can be found in C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/output_files/pratica2.fit.smsg.
 
 

@@ -1,24 +1,24 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /pratica2/MClock
-add wave -noupdate /pratica2/PClock
-add wave -noupdate /pratica2/Resetn
-add wave -noupdate /pratica2/Run
-add wave -noupdate -radix unsigned /pratica2/processor/R0
-add wave -noupdate -radix unsigned /pratica2/processor/R1
-add wave -noupdate -radix unsigned /pratica2/processor/R2
-add wave -noupdate -radix unsigned /pratica2/processor/R3
-add wave -noupdate -radix unsigned /pratica2/processor/R4
-add wave -noupdate -radix unsigned /pratica2/processor/R5
-add wave -noupdate -radix unsigned /pratica2/processor/R6
-add wave -noupdate -label R7 /pratica2/processor/pc
-add wave -noupdate -radix unsigned /pratica2/processor/A
-add wave -noupdate -radix unsigned /pratica2/processor/G
-add wave -noupdate /pratica2/processor/IR
-add wave -noupdate /pratica2/processor/I
-add wave -noupdate /pratica2/BusWires
+add wave -noupdate -color White -radix decimal /pratica2/MClock
+add wave -noupdate -color White -radix decimal /pratica2/PClock
+add wave -noupdate -color White -radix decimal /pratica2/Resetn
+add wave -noupdate -color White -radix decimal /pratica2/Run
+add wave -noupdate -color Yellow -radix unsigned /pratica2/processor/R0
+add wave -noupdate -color Gray75 -radix unsigned /pratica2/processor/R1
+add wave -noupdate -color Cyan -radix unsigned /pratica2/processor/R2
+add wave -noupdate -color Green -radix unsigned /pratica2/processor/R3
+add wave -noupdate -color Red -radix unsigned /pratica2/processor/R4
+add wave -noupdate -color {Dark Orchid} -radix unsigned /pratica2/processor/R5
+add wave -noupdate -color Gray75 -radix unsigned /pratica2/processor/R6
+add wave -noupdate -color Cyan -radix unsigned /pratica2/processor/R7
+add wave -noupdate -color {Spring Green} -radix unsigned /pratica2/processor/A
+add wave -noupdate -color Red -radix unsigned /pratica2/processor/G
+add wave -noupdate -color White /pratica2/processor/IR
+add wave -noupdate -color White /pratica2/processor/I
+add wave -noupdate -color White /pratica2/BusWires
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {611 ps} 0}
+WaveRestoreCursors {{Cursor 1} {0 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100

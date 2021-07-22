@@ -191,10 +191,10 @@ do {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pr
 # 
 #           File in use by: erick  Hostname: DESKTOP-J65UKP5  ProcessID: 9588
 # 
-#           Attempting to use alternate WLF file "./wlftcnrxcs".
+#           Attempting to use alternate WLF file "./wlftw8wwai".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftcnrxcs
+#           Using alternate file: ./wlftw8wwai
 # 
 # .main_pane.wave.interior.cs.body.pw.wf
 # 1

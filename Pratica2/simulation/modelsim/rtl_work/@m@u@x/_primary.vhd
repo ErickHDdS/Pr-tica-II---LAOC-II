@@ -10,7 +10,7 @@ entity MUX is
         r4              : in     vl_logic_vector(15 downto 0);
         r5              : in     vl_logic_vector(15 downto 0);
         r6              : in     vl_logic_vector(15 downto 0);
-        pc              : in     vl_logic_vector(5 downto 0);
+        r7              : in     vl_logic_vector(5 downto 0);
         g               : in     vl_logic_vector(15 downto 0);
         mem             : in     vl_logic_vector(15 downto 0);
         control         : in     vl_logic_vector(0 to 10);

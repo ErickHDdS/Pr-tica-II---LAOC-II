@@ -1,15 +1,15 @@
-module proc (DIN, mem, Resetn, Clock, Run, Done, BusWires, pc, addrM, doutM, wM);
+module proc (DIN, mem, Resetn, Clock, Run, Done, BusWires, R7, addrM, doutM, wM);
 	// [15:12] = Instruction 
 	// [11:9] = Xreg 
 	// [8:6] = Yreg 
-	// [5:0] -> Offset
+	// [5:0] = Offset
 	input [15:0] DIN; 
 	input [15:0] mem;
 	input Resetn, Clock, Run;
 	
 	output reg Done;
 	output [15:0] BusWires;
-	output [5:0] pc;
+	output [5:0] R7;
 	
 	output [15:0] addrM, doutM;
 	output wM;
@@ -18,7 +18,7 @@ module proc (DIN, mem, Resetn, Clock, Run, Done, BusWires, pc, addrM, doutM, wM)
 		wire Clear = Done | Resetn;		
 		// regs
 			wire [0:7] Xreg, Yreg;
-			wire [15:0] R0, R1, R2, R3, R4, R5, R6, R7, A, G;	
+			wire [15:0] R0, R1, R2, R3, R4, R5, R6, A, G;	
 			wire [15:0] aluOut;
 		// instructions
 			wire [9:0] IR;
@@ -192,7 +192,7 @@ module proc (DIN, mem, Resetn, Clock, Run, Done, BusWires, pc, addrM, doutM, wM)
 			regn reg_6 (BusWires, regIn[6], Clock, R6, Resetn);
 						
 		//Counter
-			counterlpm reg_7 (1'b1, Clock, incr_pc, BusWires[5:0], Resetn, regIn[7], pc);
+			counterlpm reg_7 (1'b1, Clock, incr_pc, BusWires[5:0], Resetn, regIn[7], R7);
 			
 		//Alu
 			ULA ula(aluSignal, A, BusWires, aluOut);
@@ -212,7 +212,7 @@ module proc (DIN, mem, Resetn, Clock, Run, Done, BusWires, pc, addrM, doutM, wM)
 			defparam reg_W.n = 1;	
 						
 	//... define the bus
-			MUX mux (DIN, R0, R1, R2, R3, R4, R5, R6, pc, G, mem, {dinOut, regOut, gOut, memOut}, BusWires);
+			MUX mux (DIN, R0, R1, R2, R3, R4, R5, R6, R7, G, mem, {dinOut, regOut, gOut, memOut}, BusWires);
 	
 	
 	
