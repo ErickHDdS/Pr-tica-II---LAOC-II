@@ -76,11 +76,41 @@ Módulos:<br />
 
 Modulos
 ============
-Regn
+counterlpm
+-----
+
+dec3to8
+-----
+
+instructionFetch
+-----
+
+MUX
+-----
+
+pratica2
+-----
+
+proc
+-----
+
+ramlpm
+-----
+
+regn
 -----
 Módulo que tem a função de resertar o registrador passado como parâmetro ( 9 bits) ou atribui-lo a uma proxima instrução
 
-upCount
+romlpm
+-----
+
+TLB
+-----
+
+ULA
+-----
+
+upcount
 -----
 Módulo para contar os estágios
 
