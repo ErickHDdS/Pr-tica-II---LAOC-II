@@ -64,7 +64,7 @@ module proc (DIN, mem, Resetn, Clock, Run, Done, BusWires, R7, addrM, doutM, wM)
 					begin
 						regOut = 8'b00000001;
 						irIn = 1'b1;
-						incr_pc = 1; // pula para proxima instrucao ou imediato
+						incr_pc = 1; 	// pula para proxima instrucao ou imediato
 					end	
 					
 				2'b01: //define signals in time step 1
@@ -192,7 +192,7 @@ module proc (DIN, mem, Resetn, Clock, Run, Done, BusWires, R7, addrM, doutM, wM)
 	regn reg_G(aluOut, gIn, Clock, G, Resetn);
 	
 	regn reg_IR(DIN[15:6], irIn, Clock, IR, Resetn);	
-	defparam reg_IR.n = 10; // instancia a n com 10 
+	defparam reg_IR.n = 10; // n = 10 
 	
 	ULA ula(aluSignal, A, BusWires, aluOut);
 	
@@ -201,7 +201,7 @@ module proc (DIN, mem, Resetn, Clock, Run, Done, BusWires, R7, addrM, doutM, wM)
 	regn reg_Addr(BusWires, addrIn, Clock, addrM, Resetn);
 	regn reg_Dout(BusWires, doutIn, Clock, doutM, Resetn);		
 	regn reg_W(wIn, 1'b1, Clock, wM, Resetn);	
-	defparam reg_W.n = 1;	// instancia a n com 1
+	defparam reg_W.n = 1;	//  n = 1
 						
 	//... define the bus
 	MUX mux (DIN, R0, R1, R2, R3, R4, R5, R6, R7, G, mem, {dinOut, regOut, gOut, memOut}, BusWires);
