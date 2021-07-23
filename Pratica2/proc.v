@@ -205,8 +205,5 @@ module proc (DIN, mem, Resetn, Clock, Run, Done, BusWires, R7, addrM, doutM, wM)
 						
 	//... define the bus
 	MUX mux (DIN, R0, R1, R2, R3, R4, R5, R6, R7, G, mem, {dinOut, regOut, gOut, memOut}, BusWires);
-	
-	
-	
 
 endmodule

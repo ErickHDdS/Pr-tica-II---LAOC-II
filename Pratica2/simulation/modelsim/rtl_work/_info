@@ -19,7 +19,7 @@ Z5 !s92 -vlog01compat -work work {+incdir+C:/Users/erick/OneDrive/Documentos/Git
 !i10b 1
 !s100 UWQUSGK]@4WY?oYnz3VQO3
 !s85 0
-!s108 1626984886.665000
+!s108 1626998743.697000
 !s107 C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/counterlpm.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2|C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/counterlpm.v|
 !s101 -O0
@@ -39,7 +39,7 @@ R5
 !i10b 1
 !s100 ^Tg_oE:=X2?`iX2B4U4KH2
 !s85 0
-!s108 1626984886.709000
+!s108 1626998743.740000
 !s107 C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/dec3to8.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2|C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/dec3to8.v|
 !s101 -O0
@@ -47,7 +47,7 @@ vinstructionFetch
 I@neC2NA8GOZ33XCVzK6KL1
 VcEolJ8eDzVZPgjKm5oe[a3
 R1
-w1626956895
+w1626988997
 8C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/instructionFetch.v
 FC:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/instructionFetch.v
 L0 1
@@ -60,7 +60,7 @@ ninstruction@fetch
 !i10b 1
 !s100 3n<<9z0:lc19iQf=dNLN61
 !s85 0
-!s108 1626984886.751000
+!s108 1626998743.781000
 !s107 C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/instructionFetch.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2|C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/instructionFetch.v|
 !s101 -O0
@@ -70,7 +70,7 @@ vMUX
 I[J;Z4jU6V<_Xb4RBCbc:c0
 V24W``o>F_jESGN@1jfFe[2
 R1
-w1626965370
+w1626989105
 8C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/MUX.v
 FC:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/MUX.v
 L0 1
@@ -78,7 +78,7 @@ R3
 r1
 !s85 0
 31
-!s108 1626984886.837000
+!s108 1626998743.869000
 !s107 C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/MUX.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2|C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/MUX.v|
 !s101 -O0
@@ -101,15 +101,15 @@ R5
 !i10b 1
 !s100 =XNVOo]IhS_9d1SG8QdGo3
 !s85 0
-!s108 1626984886.386000
+!s108 1626998743.423000
 !s107 C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/pratica2.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2|C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/pratica2.v|
 !s101 -O0
 vproc
-I71Ib0YKL;ML`0Tj[@INVm0
+IO=NRgi=H?e[]o4M^i<Fm62
 V^N9K7kEjjDanmGP=blZMb3
 R1
-w1626967338
+w1626998527
 8C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/proc.v
 FC:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/proc.v
 L0 1
@@ -119,9 +119,9 @@ r1
 R4
 R5
 !i10b 1
-!s100 LP:2C]h`n85=30N_cAzN12
+!s100 o5mkmaOCP<ofk3F_Kz5Lo3
 !s85 0
-!s108 1626984886.428000
+!s108 1626998743.464000
 !s107 C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/proc.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2|C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/proc.v|
 !s101 -O0
@@ -141,7 +141,7 @@ R5
 !i10b 1
 !s100 945`<jNPg43FLW^Bik6_^3
 !s85 0
-!s108 1626984886.577000
+!s108 1626998743.609000
 !s107 C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/ramlpm.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2|C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/ramlpm.v|
 !s101 -O0
@@ -161,7 +161,7 @@ R5
 !i10b 1
 !s100 4Y1nl>CTKXF<4zoHF:0iY1
 !s85 0
-!s108 1626984886.535000
+!s108 1626998743.566000
 !s107 C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/regn.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2|C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/regn.v|
 !s101 -O0
@@ -181,15 +181,15 @@ R5
 !i10b 1
 !s100 nVm5QTV21U3056n5<X^@a0
 !s85 0
-!s108 1626984886.620000
+!s108 1626998743.654000
 !s107 C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/romlpm.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2|C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/romlpm.v|
 !s101 -O0
 vTLB
-I^o;Yg]H95[L@?Kkm>l^I23
+Igd0<hR2TlALd;zM;UQ;I40
 VUD^K8?6Y535[:@91mL^n]1
 R1
-w1626984828
+w1626998696
 8C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/tlb.v
 FC:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/tlb.v
 L0 1
@@ -200,9 +200,9 @@ R4
 n@t@l@b
 R5
 !i10b 1
-!s100 Mf9hY9]M`nG9c;Gj12Ulo2
+!s100 J`MlMM0I6[AnT08_j:VjO1
 !s85 0
-!s108 1626984886.341000
+!s108 1626998743.380000
 !s107 C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/tlb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2|C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/tlb.v|
 !s101 -O0
@@ -223,7 +223,7 @@ n@u@l@a
 !i10b 1
 !s100 mbFfE11f9bT`6nQAMS4g`0
 !s85 0
-!s108 1626984886.794000
+!s108 1626998743.827000
 !s107 C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/ULA.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2|C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/ULA.v|
 !s101 -O0
@@ -238,7 +238,7 @@ L0 1
 R3
 r1
 31
-Z9 !s108 1626984886.473000
+Z9 !s108 1626998743.507000
 Z10 !s107 C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/upcount.v|
 Z11 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2|C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica II/Pratica-II-LAOC-II/Pratica2/upcount.v|
 R4
