@@ -28,6 +28,8 @@ Check List
    * [Testes](#código-teste)
      * [Programa Principal](#programa-principal)  
      * [Loop](#loop)  
+
+   * [Desenvolvedores](#realizado-por)
 <!--te-->
 
 
@@ -190,3 +192,8 @@ Loop
 16'b0000101111000000; // MV R5,R7 <br />
 16'b0110100010000000; // SUB R4,R2 <br />
 16'b0010111101000000; // MVNZ R7,R5 <br />
+
+## Realizado por:
+
+[**Erick H. D. de Souza**](https://github.com/ErickHDdS) e
+[**Marina B. Diniz**](https://github.com/pixel-debug)
